@@ -1,0 +1,115 @@
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  New Functions
+  This page contains the code for the ISU website
+-->
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Rough Sketches</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <link rel="icon" href="../IMAGES/New.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="../CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="index.html">New Functions</a></li>
+          <li><a href="../HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="../GAME/index.html">Game</a></li>
+          <li><a href="../code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="CODESHHP_IMG" src="../IMAGES/Function.gif">
+      <div class="CODESHHomepageHeaderBox">
+        <h1 class="HopePageHeader">New Functions</h1>
+      </div>
+    </div>
+    <br>
+    <!--Below is the New Functions Stuff -->
+    <div class="NF1BoxOutline">
+      <div class="NF1HeaderBox">
+        <h1 class="NFHeader">getElementByID</h1>
+      </div>
+      <div class="NF1TextBox">
+        <p class="NFText">This brand-new function getElementId basically converts JavaScript variables into HTML. These brand-new variables can then be used to make a scoreboard in HTML. </p>
+      </div>
+      <div class="NF1IMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/getElementById.png">
+      </div>
+    </div>
+    <br>
+    <div class="NFBoxOutline">
+      <div class="NFHeaderBox">
+        <h1 class="NFHeader">Pause Function</h1>
+      </div>
+      <div class="NF2TextBox">
+        <p class="NFText">The pause function's main purpose is to pause audio files from playing. For us, it's used to pause the audio in the background, and then to initiate the panic audio.</p>
+      </div>
+      <div class="NFIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/pauseFunction.png">
+      </div>
+    </div>
+    <br>
+    <div class="NFBoxOutline">
+      <div class="NFHeaderBox">
+        <h1 class="NFHeader">Resume Function</h1>
+      </div>
+      <div class="NF3TextBox">
+        <p class="NFText">The resume function's main purpose is to resume audio that was paused from the pause function. We use this function to resume the bgMusic after the user's score is > or = to the opponent.</p>
+      </div>
+      <div class="NFIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/resumeFunction.png">
+      </div>
+    </div>
+    <br>
+    <div class="NFBoxOutline">
+      <div class="NFHeaderBox">
+        <h1 class="NFHeader">Stop Function</h1>
+      </div>
+      <div class="NF4TextBox">
+        <p class="NFText">This function stops audio from playing completely. We use this to stop the panic audio after the user score is > or = to the opponents</p>
+      </div>
+      <div class="NFIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/stopFunction.png">
+      </div>
+    </div>
+    <br>
+    <div class="NF5BoxOutline">
+      <div class="NF5HeaderBox">
+        <h1 class="NFHeader">Destroy Function</h1>
+      </div>
+      <div class="NF5TextBox">
+        <p class="NFText">This destroy function basically removes a specified text from existing. We need this to remove certain text from appearing on the screen  </p>
+      </div>
+      <div class="NF5IMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/destroyFunction.png">
+      </div>
+    </div>
+    <br>
+  </body>
+</html>

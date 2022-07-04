@@ -1,0 +1,3916 @@
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Home Page of ISU website
+  This page contains the code for the ISU website
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="icon" href="IMAGES/Home.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+ <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href=index.html>Home</a></li>
+          <li><a href="/ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="/CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="/NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="/HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="/GAME/index.html">Game</a></li>
+          <li><a href="/code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="HP_IMG" src="IMAGES/RPSHomepageIMG.gif">
+      <div class="HomepageHeaderBox">
+        <h1 class="HopePageHeader">Rock Paper Scissors Remastered</h1>
+      </div>
+    </div>
+    <!--Below is is the div for our info box-->
+    <div class="InfoBoxOutline">
+      <div class="InfoHeaderBox">
+        <h2 class="InfoHeader">About this Project</h2>
+      </div>
+      <div class="InfoTextBox">
+        <p class="InfoText">Welcome to Rock Paper Scissors Remastered! This game is Akaran, Kaven and Sansar's Computer Science Summative assignment. Originally, we did Rock, Paper, Scissors for our Unit 2 assignment. Now, as the semester is almost finished, we planned on making a new version of our alert game, and push our knowledge of coding to the max.</p>
+      </div>
+    </div>
+    <div class="WorkBoxOutline">
+      <div class="WorkHeaderBox">
+        <h2 class="WorkHeader">Work Distribution</h2>
+      </div>
+      <div class="HorizontalWorkBox">
+        <div class="AkaranBox">
+          <img class="AkaranAvatar" src="IMAGES/AkaranAvatar.png">
+          <div class="AvatarHiddenText">
+            <p class="AvatarText">Akaran: Finds and creates images and sprites.</p>
+          </div>
+        </div>
+        <div class="KavenBox">
+          <img class="KavenAvatar" src="IMAGES/KavenAvatar.jpg">
+          <div class="AvatarHiddenText">
+            <p class="AvatarText">Kaven: Main developer in JS, designer for the rough sketches</p>
+          </div>
+        </div>
+        <div class="SansarBox">
+          <img class="SansarAvatar" src="IMAGES/SansarAvatar.png">
+          <div class="AvatarHiddenText">
+            <p class="AvatarText">Sansar: Main developer in HTML, CSS and partial JS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="PossibleBoxOutline">
+      <div class="PossibleHeaderBox">
+        <h2 class="PossibleHeader">Possible Challenges</h2>
+      </div>
+      <div class="PossibleTextBox">
+        <p class="PossibleText">We think the biggest challenge is to make Rock Paper Scissors appealing to the user, and also to be using all the different ways of coding in class. Thus, we decided to create 2 game modes, normal and insane.<br>
+          <br>
+        1. The first challenge is to make the AI unpredictable<br><br>
+        2. To use arrays to store the user's data. One of the ways we plan on implementing string functions is by creating initials for someone's names. For example, if someone were to type their name as ”Alex Smith” it would return it as A.S.<br><br>
+        3.In our first game, we implemented an insane mode. This game mode would ask the user a trivia question every time they answered right. Before, it was very tough to implement this before. However, we can use arrays now to store these questions. So now we can randomly call a random sort of questions.<br><br>
+        4.For sorting, we plan on implementing a scoreboard. In this scoreboard, we can sort each score from greatest to least.<br>
+        </p>
+      </div>
+    </div>
+    <div class="ScreenBoxOutline">
+      <div class="InfoHeaderBox">
+        <h2 class="InfoHeader">Screens</h2>
+      </div>
+      <div class="InfoTextBox">
+        <p class="InfoText">We have 5 screens for the game.<br>
+        1: Initial Scene <br>
+        2: Start Scene<br>
+        3: Menu Scene<br>
+        4: Game Scene<br>
+        5: Insane Game Scene<br>
+        6: End Scene<br>
+        </p>
+      </div>
+    </div>
+    <div class="ConcernsBoxOutline">
+      <div class="InfoHeaderBox">
+        <h2 class="InfoHeader">Concerns</h2>
+      </div>
+      <div class="InfoTextBox">
+        <p class="InfoText">There are 2 main concerns with regard to the game. Our first concern is our lack of experience developing a game. We will be implementing five new functions never taught in class. Researching and implementing these functions will have a learning curve, so we need to allocate time for that. Our second concern is creating a scoreboard. We have a lot of plans for the scoreboard, so implementing all features at once will prove a challenge. Mainly, we are trying to incorporate initials instead of full names, and a sorting algorithm to rank scores. This concern can be mitigated with proper scope-planning.
+        </p>
+      </div>
+    </div>
+    <br>
+  </body>
+</html>
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Code Snippets
+  This page contains for the Code Snippets page
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Code Snippets</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <link rel="icon" href="../IMAGES/Snippet.png">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="/index.html">Code Snippets</a></li>
+          <li><a href="../NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="../HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="../GAME/index.html">Game</a></li>
+          <li><a href="../code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="CODESHHP_IMG" src="../IMAGES/Snippet.gif">
+      <div class="CODESHHomepageHeaderBox">
+        <h1 class="HopePageHeader">Code Snippet</h1>
+      </div>
+    </div>
+    <br>
+    <div class="CodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Global Variables</h1>
+      </div>
+      <div class="GlobalCodeSHTextBox">
+        <p class="CodeSHText">These are some of the few global variables we used in our game. There main function is to key track of the players score, opponets score, round count, and the number of rounds</p>
+      </div>
+      <div class="GlobalCODESHIMGBOX">
+        <img class="ScreenshotImage1" src="IMAGES/globalVariables.png">
+      </div>
+    </div>
+    <br>
+    <div class="CodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions without Parameters</h1>
+      </div>
+      <div class="FwiPCodeSHTextBox">
+        <p class="CodeSHText">This is an example of a function with no parameters. It's main role is to hide the rock paper and scissor images</p>
+      </div>
+      <div class="FwPCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionWithoutParameters.png">
+      </div>
+    </div>
+    <br>
+    <div class="CodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions with Parameters</h1>
+      </div>
+      <div class="FwPCodeSHTextBox">
+        <p class="CodeSHText">This functions with a parameter is used as a button. It plays a sound, starts a new scene, and removes an old scene when clicked. </p>
+      </div>
+      <div class="FwPCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionWithParameters.png">
+      </div>
+    </div>
+    <br>
+    <div class="FwPaRVCodeSHBoxOutline">
+      <div class="FwPaRVCodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions without Parameters & Return values</h1>
+      </div>
+      <div class="FwPaRVCodeSHTextBox">
+        <p class="CodeSHText">This is yet another example of a function without a parameter. However, this one also has a return value. This functions main role is to read the user inputted username and check to see if it has any characters that are not apart of the basic alphabet.</p>
+      </div>
+      <div class="FwPaRVCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionReturns.png">
+      </div>
+    </div>
+    <br>
+    <div class="FPaRVCodeSHBoxOutline">
+      <div class="FPaRVCodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions Parameters & Return values</h1>
+      </div>
+      <div class="FPaRVCodeSHTextBox">
+        <p class="CodeSHText">This function which has a parameter and a return value is so important to our game. With our old rock paper scissor game, we had to constantly copy and paste if and else statements to check if the user won/lost/tied with the bot. However this function reads the user inputted rock paper scissor and compares it to the randomly generated rock paper scissor from our array. Ultimately, this function removes 500+ lines of code.</p>
+      </div>
+      <div class="FPaRVCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionParameterReturn.png">
+      </div>
+    </div>
+    <br>
+    <div class="SF1CodeSHBoxOutline">
+      <div class="SF1CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">String Function #1</h1>
+      </div>
+      <div class="SF1CodeSHTextBox">
+        <p class="CodeSHText">This is a simple string function. Is simply changes a username to all lower case. This is then used for the string function below!</p>
+      </div>
+      <div class="SF1CODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/stringFunction1.png">
+      </div>
+    </div>
+    <br>
+    <div class="SF2CodeSHBoxOutline">
+      <div class="SF2CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">String Function #2</h1>
+      </div>
+      <div class="SF2CodeSHTextBox">
+        <p class="CodeSHText">Theres actually quite a lot of string functions used in this snippet. Firstly, .length() is used to check how long the user name is for a for let statement. Then, a if statement check each character of the username to see if it include normal alphabetic characters. If it doesn't, then a count is added. </p>
+      </div>
+      <div class="SF2CODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/stringFunction2.png">
+      </div>
+    </div>
+    <br>
+    <div class="AECodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Array Example #1</h1>
+      </div>
+      <div class="AECodeSHTextBox">
+        <p class="CodeSHText">This is a very simple array. It contains 3 elements called rock paper and scissors. It is then randomly selected and used for the base game.</p>
+      </div>
+      <div class="AECODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/array1.png">
+      </div>
+    </div>
+    <br>
+    <div class="AECodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Array Example #2</h1>
+      </div>
+      <div class="AECodeSHTextBox">
+        <p class="CodeSHText">This is an array which stores questions and answers. At the time of writing this, we have not used it just yet. However, it will be used in the final game for insane mode. </p>
+      </div>
+      <div class="AECODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/array2.png">
+      </div>
+    </div>
+    <br>
+    <div class="SF2CodeSHBoxOutline">
+      <div class="SF2CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Bubble Sorting</h1>
+      </div>
+      <div class="SF2CodeSHTextBox">
+        <p class="CodeSHText">This bubble sorting function will be used for leaderboard. However, it has not been implemented in the games yet.</p>
+      </div>
+      <div class="SF2CODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/bubbleSorting.png">
+      </div>
+    </div>
+    <br>
+  </body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Game Page
+  This page contains the code for the ISU website
+-->
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="icon" href="../IMAGES/Game.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Game</title>
+  </head>
+  <body>
+  <!--Below is out Navigation Bar-->
+     <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="/ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="/CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="/NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="/HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="/GAME/index.html">Game</a></li>
+          <li><a href="/code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+  <!--Below is header for the website-->
+    <div class="HeaderBox">
+      <h1 class="title">Rock Paper Scissors Remastered</h1>
+    </div>
+  <!--Below is the scoreboard for the game-->
+    <div class="scoreboardoutline">
+      <div class="scoreheaderbox">
+        <h2 class="scoreboardHeader">Scoreboard</h2>
+      </div>
+      <div class="scorenamerows">
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Username</h2>
+        </div>
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Rounds</h2>
+        </div>
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Wins</h2>
+        </div>
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Losses</h2>
+        </div>
+      </div>
+      <!--Below is the Username Collum-->
+      <div class="UsernameCollum">
+        <div class="UsernameCells1">
+          <p id="PlayerName1">-</p>
+        </div>
+        <div class="UsernameCells2">
+          <p id="PlayerName2">-</p>
+        </div>
+        <div class="UsernameCells3">
+          <p id="PlayerName3">-</p>
+        </div>
+        <div class="UsernameCells4">
+          <p id="PlayerName4">-</p>
+        </div>
+        <div class="UsernameCells5">
+          <p id="PlayerName5">-</p>
+        </div>
+      </div>
+      <!--Below is the rounds Played Collum-->
+      <div class="RoundsCollum">
+        <div class="RoundsCells1">
+          <p id="RoundsPlayed1">-</p>
+        </div>
+        <div class="RoundsCells2">
+          <p id="RoundsPlayed2">-</p>
+        </div>
+        <div class="RoundsCells3">
+          <p id="RoundsPlayed3">-</p>
+        </div>
+        <div class="RoundsCells4">
+          <p id="RoundsPlayed4">-</p>
+        </div>
+        <div class="RoundsCells5">
+          <p id="RoundsPlayed5">-</p>
+        </div>
+      </div>
+      <!--Below is the Wins collum-->
+      <div class="WinsCollum">
+        <div class="WinsCells1">
+          <p id="PlayerWins1">-</p>
+        </div>
+        <div class="WinsCells2">
+          <p id="PlayerWins2">-</p>
+        </div>
+        <div class="WinsCells3">
+          <p id="PlayerWins3">-</p>
+        </div>
+        <div class="WinsCells4">
+          <p id="PlayerWins4">-</p>
+        </div>
+        <div class="WinsCells5">
+          <p id="PlayerWins5">-</p>
+        </div>
+      </div>
+      <!--Below is the Losses collum-->
+      <div class="LossesCollum">
+        <div class="LossesCells1">
+          <p id="PlayerLosses1">-</p>
+        </div>
+        <div class="LossesCells2">
+          <p id="PlayerLosses2">-</p>
+        </div>
+        <div class="LossesCells3">
+          <p id="PlayerLosses3">-</p>
+        </div>
+        <div class="LossesCells4">
+          <p id="PlayerLosses4">-</p>
+        </div>
+        <div class="LossesCells5">
+          <p id="PlayerLosses5">-</p>
+        </div>  
+      </div>     
+    </div>
+  </body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+/* 
+ Akaran, Kaven, Sansar 
+ 6/6/2022
+ Game Code
+ This page contains the code for the Rock Paper Scissors Game
+*/
+//Rock Paper Scissors variables
+let rock = "rock";
+let paper = "paper";
+let scissors = "scissors";
+let wrongAnimation;
+
+//Important number counts
+let roundCount = 0;
+let roundCountString = "";
+let rounds = 0;
+let pScore = 0;
+let oScore = 0;
+let replayCount = 0;
+
+//String Variables
+let startMessage = "Rock Paper Scissors \n      Remastered";
+let person = "";
+let personT;
+let gameModeMessage = "Choose your gamemode!"
+let selection = "   Select either rock paper or scissors!"
+let opponent = "opponent";
+let pScoreString = "";
+let oScoreString = "";
+let ScoreArray = [];
+
+//Sprites
+let background;
+let backgroundGame;
+let startButton;
+let loadingIcon;
+
+//Sound files
+let bgMusic;
+let buttonClick;
+let panicSound;
+
+//Images
+let classicButton;
+let clickHere;
+let insaneButton;
+let rockImage;
+let paperImage;
+let scissorsImage;
+
+
+//Booleans
+let screenShake;
+
+//Important classic variables
+let selectionTemp;
+let opponentTemp;
+let personTTemp;
+let roundCountStringTemp;
+let pScoreStringTemp;
+let oScoreStringTemp;
+
+//Arrays
+let nameArray = []; //Name array must be global to make sure no ones trying to
+let pScoreArray = [];
+let oScoreArray = [];
+let roundsArray = [];
+let tempArray = [];
+
+// Variables for Insane Mode
+
+//Array questions for insane mode
+let questionArray = ["Where is Argentina Located?", "What language do people in Brazil speak?", "What causes Earthquakes?", "Where is Mount Everest located?", "What is the most populated country in the world?", "How many states are in the USA", "What is the largest continent by area?", "How many French speaking countries are in the world?", "What is the only country in the world, that has it's name start with an O", "What is the largest ocean?", "What is the imaginary line in the middle of the earth called?", "What is the smallest country in the world?", "What country has the most islands in the world?", "What is the horizontal line in the globe called?", "What is the vertical line in the globe called", "What is the capital of Mexico?", "What country borders portugal?"];
+let answerArray = ["south america", "portuguese", "tectonic plates", "nepal", "china", "50", "asia", "29", "oman", "pacific ocean", "the equator", "vatican city", "sweden", "latitude", "longitude", "mexico city", "spain"];
+
+
+/*********************START OF THE INITIALIZATION SCENE*********************/
+class initializingScene extends Phaser.Scene {
+  constructor(config) {
+    super(config);
+  }
+
+  preload() {
+    //loads an audio sound used for button clickings
+    this.load.audio("buttonClicked", "assets/audio/buttonClick.mp3");
+    //loads the click here picture
+    this.load.image("clickHere", "assets/IMAGES/clickHere.png");
+    this.load.spritesheet('load', 'assets/sprites/loading.png', { frameWidth: 300, frameHeight: 300 });
+  }
+  create() {
+    let intermission = "Intermission";
+    //Adds the button clicking sound
+    buttonClick = this.sound.add("buttonClicked")
+    //creates a loading circle sprite. Ths sprite infinitely loops
+    this.anims.create({
+      key: "loadF",
+      frames: this.anims.generateFrameNumbers("load", {
+        start: 0,
+        end: 7
+      }),
+      frameRate: 15,
+      repeat: 0
+    });//end of the sprite
+    //sets the position and scale for the loading icon
+    loadingIcon = this.add.sprite(400, 300, 'loadF');
+    loadingIcon.setScale(0.1);
+    //intermission text and font customization 
+    this.intermission = this.add.text(285, 100, intermission, { fontFamily: "DM Sans,sans-serif", fontSize: 42, color: "#FFFFFF", textAlign: "center" });
+    //adjust position and scale. Also Makes it interactive.
+    clickHere = this.physics.add.image(400, 460, "clickHere").setInteractive();
+    //hover
+    clickHere.on("pointerdown", function(pointer) {
+      this.setTint(925252);
+    });//end of pointerdown event
+    clickHere.on("pointerup", function(pointer) {
+      buttonClick.play();//<-----NEW FUNCTION
+      this.clearTint();
+      //startMessage.x=-1000;
+      alert(nameTaker());
+      game.scene.start("startScene");
+      game.scene.stop("initialScene");
+    });
+    //This function takes your name and checks if your name has invalid characters
+    function nameTaker() {
+      let out = false;
+      let count = 0;
+      while (out == false) {
+        person = prompt("Please enter your name:", "Username");
+        while (nameArray.includes(person)) {
+          alert("The username " + person + " is already in the leaderboard. To keep competitive integrity, please select another name.")
+          person = prompt("Please enter your name:", "Username");
+        }
+        //Converts the text to lower case
+        let personTemp = person.toLowerCase();
+        for (let x = 0; x <= personTemp.length - 1; x++) {
+          if (personTemp.charAt(x) == "a" || personTemp.charAt(x) == "b" || personTemp.charAt(x) == "o" || personTemp.charAt(x) == "c" || personTemp.charAt(x) == "p" || personTemp.charAt(x) == "d" || personTemp.charAt(x) == "q" || personTemp.charAt(x) == "e" || personTemp.charAt(x) == "r" || personTemp.charAt(x) == "f" || personTemp.charAt(x) == "s" || personTemp.charAt(x) == "g" || personTemp.charAt(x) == "t" || personTemp.charAt(x) == "h" || personTemp.charAt(x) == "u" || personTemp.charAt(x) == "i" || personTemp.charAt(x) == "v" || personTemp.charAt(x) == "j" || personTemp.charAt(x) == "w" || personTemp.charAt(x) == "k" || personTemp.charAt(x) == "x" || personTemp.charAt(x) == "l" || personTemp.charAt(x) == "y" || personTemp.charAt(x) == "m" || personTemp.charAt(x) == "z" || personTemp.charAt(x) == "n") {
+            count += 0
+          }
+          else {
+            count++
+          }
+        }
+        if (count > 0) {
+          alert("Invalid Entry. You have " + count + " invalid characters");
+          count = 0
+        }
+        else {
+          out = true;
+        }
+      }
+      return "Hello " + person + "!";//returns name
+    }
+  }
+  update() {
+    loadingIcon.anims.play("loadF", true);
+  }
+}
+
+
+
+
+/*********************START OF THE START SCENE*********************/
+
+
+class startScene extends Phaser.Scene {
+  constructor(config) {
+    super(config);
+
+  }
+  preload() {
+    //Loads the background music
+    this.load.audio("bgMusic", "assets/audio/startMusic.mp3");
+    this.load.audio("buttonClicked", "assets/audio/buttonClick.mp3");
+    //Loads the backgroud sprite found in the menu
+    this.load.spritesheet('bg', 'assets/sprites/background.png', { frameWidth: 800, frameHeight: 600 });
+    //Loads the start button for the game
+    this.load.spritesheet('pressStart', 'assets/sprites/pressStart.png', { frameWidth: 480, frameHeight: 100 });
+
+  }
+  create(data) {
+    //This adds and plays the background music
+    bgMusic = this.sound.add("bgMusic");
+    bgMusic.play();
+    //Adds the button clicking sound
+    buttonClick = this.sound.add("buttonClicked")
+    //This is the animation in the start menu
+    this.anims.create({
+      key: "bg1",
+      frames: this.anims.generateFrameNumbers("bg", {
+        start: 0,
+        end: 90
+      }),
+      frameRate: 30,
+      repeat: 0
+    });
+    this.bg = this.add.sprite(400, 300, 'bg1');
+    //This is the press start button
+    this.anims.create({
+      key: "startFrames",
+      frames: this.anims.generateFrameNumbers("pressStart", {
+        start: 0,
+        end: 2
+      }),
+      frameRate: 5,
+      repeat: 0
+    });
+    startButton = this.add.sprite(400, 400, 'pressStart').setInteractive();
+    startButton.setScale(0.5);
+    //hover
+    startButton.on("pointerup", function(pointer) {
+      this.setTint(0xff0000);
+    });//end of pointerdown event
+    startButton.on("pointerdown", function(pointer) {
+      this.clearTint();
+      buttonClick.play();
+      game.scene.stop("startScene");
+      game.scene.start("menuScene");
+    });
+    //This is the start screen message
+    this.startMessage = this.add.text(210, 100, startMessage, { fontFamily: "DM Sans,sans-serif", fontSize: 42, color: "#FFFFFF", textAlign: "center" });
+  }
+
+
+
+  update() {
+    //sets the background
+    this.bg.anims.play("bg1", true);
+    //Sets the press start button
+    startButton.anims.play("startFrames", true);
+
+  }
+}
+
+
+
+
+/*********************START OF THE MENU SCENE*********************/
+class menuScene extends Phaser.Scene {
+  constructor(config) {
+    super(config);
+  }
+
+  preload() {
+    //loads the button click audio
+    this.load.audio("buttonClicked", "assets/audio/buttonClick.mp3");
+
+    //loads the classic mode and insane mode images
+    this.load.image("classic", "assets/IMAGES/classic.png");
+    this.load.image("insane", "assets/IMAGES/insane.png");
+
+    //loads the rock paper scissors animated battle in the background
+    this.load.spritesheet('bg', 'assets/sprites/image.png', { frameWidth: 800, frameHeight: 600 });
+  }
+  create() {
+    //declares the button clicked audio in the buttonClick variable
+    buttonClick = this.sound.add("buttonClicked")
+    //Animation for the background
+    this.anims.create({
+      key: "bg1",
+      frames: this.anims.generateFrameNumbers("bg", {
+        start: 0,
+        end: 90
+      }),
+      frameRate: 30,
+      repeat: 0
+    });
+    this.bg = this.add.sprite(400, 300, 'bg1');
+    //This makes the classic mode and insane mode buttons interactive
+    classicButton = this.physics.add.image(140, 340, "classic").setInteractive();
+    insaneButton = this.physics.add.image(660, 340, "insane").setInteractive();
+    //When classic mode is clicked then..
+    classicButton.on("pointerdown", function(pointer) {
+      this.setTint(595959);
+    });//end of pointerdown event
+    classicButton.on("pointerup", function(pointer) {
+      buttonClick.play();//Plays the audio for the button click
+      this.clearTint();//changes the tint
+      //startMessage.x=-1000;
+      rounds = +prompt("How many round would you like? \nONLY ODD NUMBERS", 3) //prompt for rounds
+      while (rounds % 2 == 0) { //while loop if the rounds modulo 2 
+        rounds = +prompt("Invalid Number. How many round would you like?", 3)
+      }
+      game.scene.stop("menuScene");
+      game.scene.start("gameScene");
+    });
+    insaneButton.on("pointerdown", function(pointer) {
+      this.setTint(595959);
+    });//end of pointerdown event
+    insaneButton.on("pointerup", function(pointer) {
+      buttonClick.play();
+      this.clearTint();
+      //startMessage.x=-1000;
+      rounds = +prompt("How many round would you like? \nONLY ODD NUMBERS", 3)
+      while (rounds % 2 == 0) {
+        rounds = +prompt("Invalid Number. How many round would you like?", 3)
+      }
+      game.scene.stop("menuScene");
+      game.scene.start("insaneGameScene");
+    });
+    this.gameModeMessage = this.add.text(150, 100, gameModeMessage, { fontFamily: "DM Sans,sans-serif", fontSize: 42, color: "#FFFFFF", textAlign: "center" })
+  }
+  update() {
+    this.bg.anims.play("bg1", true);
+  }
+}
+
+
+
+/*********************START OF THE GAME SCENE*********************/
+//Mr krnic added these. Idk if they are important 
+let startTime = 0;
+let endTime = 0;
+let elapsed = 0;
+let showAdd = false;
+class gameScene extends Phaser.Scene {
+  constructor(config) {
+    super(config);
+  }
+
+  preload() {
+    this.load.audio("buttonClicked", "assets/audio/buttonClick.mp3");
+    //This loads the panic audio
+    this.load.audio("panic", "assets/audio/panicMusic.m4a");
+
+    //These are all the sprites for the base game plus a unique background for the game. 
+    this.load.spritesheet('rockMoving', 'assets/sprites/rock.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('opponentRockMoving', 'assets/sprites/rockOpponent.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('paperMoving', 'assets/sprites/paper.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('opponentPaperMoving', 'assets/sprites/paperOpponent.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('scissorsMoving', 'assets/sprites/scissors.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('opponentScissorsMoving', 'assets/sprites/scissorsOpponent.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('bgGame', 'assets/sprites/classicBackground.png', { frameWidth: 1024, frameHeight: 384 });
+
+    //These are the images of the pixelated rock paper and scissors
+    this.load.image("rock", "assets/IMAGES/rock.png");
+    this.load.image("paper", "assets/IMAGES/paper.png");
+    this.load.image("scissors", "assets/IMAGES/scissors.png");
+  }
+
+  create() {
+    //These are variables that are only necessary for the game. These includes the sprites of the rock paper and scissors
+    let rockSprite;
+    let opponentRockSprite;
+    let paperSprite;
+    let opponentPaperSprite;
+    let scissorsSprite;
+    let opponentScissorsSprite;
+    //this is the panic audio activation. Basically later in the code if your score is less then the opponents, it will activate
+    let panic = 0;
+
+    //sound declarations
+    buttonClick = this.sound.add("buttonClicked");
+    panicSound = this.sound.add("panic");
+
+    //This is the background of the game scene. It has to be executed before all the other code. Otherwise, the background would overlap all the text. 
+    this.anims.create({
+      key: "bgGame1",
+      frames: this.anims.generateFrameNumbers("bgGame", {
+        start: 0,
+        end: 7
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    this.bgGame = this.add.sprite(400, 300, 'bgGame1').setScale(1.55);
+
+
+    //These are all the text ouputed by the game
+    selectionTemp = this.add.text(120, 50, selection, { fontFamily: "DM Sans,sans-serif", fontSize: 32, color: "#FFFFFF", textAlign: "center" })
+    opponentTemp = this.add.text(700, 150, opponent, { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    personTTemp = this.add.text(15, 150, person, { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    if (roundCountStringTemp == null) {
+      roundCountStringTemp = this.add.text(400, 100, roundCount.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    }
+    if (pScoreStringTemp == null) {
+      pScoreStringTemp = this.add.text(30, 175, pScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    }
+    if (oScoreStringTemp == null) {
+      oScoreStringTemp = this.add.text(750, 175, oScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    }
+
+
+
+
+    //This makes the rock paper scissor images interactible 
+    rockImage = this.physics.add.image(200, 240, "rock").setInteractive();
+    paperImage = this.physics.add.image(400, 240, "paper").setInteractive();
+    scissorsImage = this.physics.add.image(600, 240, "scissors").setInteractive();
+
+    rockImage.setScale(0.5);
+    paperImage.setScale(0.5);
+    scissorsImage.setScale(0.4);
+
+    //Rock sprite
+    this.anims.create({
+      key: "rockF",
+      frames: this.anims.generateFrameNumbers("rockMoving", {
+        start: 0,
+        end: 31
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    rockSprite = this.add.sprite(10500, 400, 'rockMoving').setInteractive();
+
+    //The opponents rock sprite
+    this.anims.create({
+      key: "opponentRockF",
+      frames: this.anims.generateFrameNumbers("opponentRockMoving", {
+        start: 0,
+        end: 31
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    opponentRockSprite = this.add.sprite(10500, 400, 'opponentRockMoving').setInteractive();
+
+    //Paper sprite
+    this.anims.create({
+      key: "paperF",
+      frames: this.anims.generateFrameNumbers("paperMoving", {
+        start: 0,
+        end: 41
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    paperSprite = this.add.sprite(10500, 400, 'paperMoving').setInteractive();
+
+    //The opponents paper sprite
+    this.anims.create({
+      key: "opponentPaperF",
+      frames: this.anims.generateFrameNumbers("opponentPaperMoving", {
+        start: 0,
+        end: 41
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    opponentPaperSprite = this.add.sprite(10500, 400, 'opponentPaperMoving').setInteractive();
+
+    //scissors sprite
+    this.anims.create({
+      key: "scissorsF",
+      frames: this.anims.generateFrameNumbers("scissorsMoving", {
+        start: 0,
+        end: 42
+      }),
+      frameRate: 23,
+      repeat: 0
+    });
+    scissorsSprite = this.add.sprite(10500, 400, 'opponentScissorsMoving').setInteractive();
+
+    //the opponent scissors sprite
+    this.anims.create({
+      key: "opponentScissorsF",
+      frames: this.anims.generateFrameNumbers("opponentScissorsMoving", {
+        start: 0,
+        end: 42
+      }),
+      frameRate: 18,
+      repeat: 0
+    });
+    opponentScissorsSprite = this.add.sprite(10500, 400, 'opponentScissorsMoving').setInteractive();
+
+    //This is when the user interacts with rock image
+    rockImage.on("pointerdown", function(pointer) {
+    });
+    rockImage.on("pointerup", function(pointer) {
+      //This destroys all the text in the game
+      roundCountStringTemp.destroy();
+      oScoreStringTemp.destroy();
+      pScoreStringTemp.destroy();
+      buttonClick.play();
+      //resets the position of all sprites
+      resetPosition();
+      //takes the result of the rpsBaseGame function and puts it in the rps variable
+      let rps = rpsBaseGame(rock);
+      //Plays the rock sprite at the set position
+      rockSprite.anims.play("rockF", true).setFlipX(true).setPosition(105, 500);
+      //If the function says "you won" then it checks stoppanicmusic to see if your score exceed the opponents. If it doesnt, panic music continues to play. 
+      if (rps == "You won!") {
+        stopPanicMusic();
+        //Plays the sprite which you won from
+        scissorsSprite.anims.play("scissorsF", true).setFlipX(false).setPosition(700, 500);
+      }
+      //If the function says "you lost" then it checks panicmusic to see if your score is less then the opponents. If it isnt, bgmusic continus to play. 
+      else if (rps == "You lost!") {
+        panicMusic();
+        paperSprite.anims.play("paperF", true).setFlipX(false).setPosition(700, 500);
+        screenShake = true; //shakes the screen to indicate you lost a point
+      }
+      //If the function say "you tied"
+      else if (rps == "You tied! Round will be restarted!") {
+        opponentRockSprite.anims.play("opponentRockF", true).setFlipX(false).setPosition(700, 500);
+      }
+      hideImages();
+      showAdd = true;
+    });
+
+    //Refer to the rock comments for functionality
+    paperImage.on("pointerdown", function(pointer) {
+    });
+    paperImage.on("pointerup", function(pointer) {
+      roundCountStringTemp.destroy();
+      oScoreStringTemp.destroy();
+      pScoreStringTemp.destroy();
+      buttonClick.play();
+      resetPosition();
+      let rps = rpsBaseGame(paper);
+      paperSprite.anims.play("paperF", true).setFlipX(true).setPosition(105, 500);
+      if (rps == "You won!") {
+        stopPanicMusic();
+        rockSprite.anims.play("rockF", true).setFlipX(false).setPosition(700, 500);
+      }
+      else if (rps == "You lost!") {
+        panicMusic();
+        scissorsSprite.anims.play("scissorsF", true).setFlipX(false).setPosition(700, 500);
+        screenShake = true;
+      }
+      else if (rps == "You tied! Round will be restarted!") {
+        opponentRockSprite.anims.play("opponentPaperF", true).setFlipX(false).setPosition(700, 500);
+      }
+      hideImages();
+      showAdd = true;
+    });
+
+    //Refer to the rock comments for functionality
+    scissorsImage.on("pointerdown", function(pointer) {
+    });
+    scissorsImage.on("pointerup", function(pointer) {
+      roundCountStringTemp.destroy();
+      oScoreStringTemp.destroy();
+      pScoreStringTemp.destroy();
+      buttonClick.play();
+      resetPosition();
+      let rps = rpsBaseGame(scissors);
+      scissorsSprite.anims.play("scissorsF", true).setFlipX(true).setPosition(105, 500);
+      if (rps == "You won!") {
+        stopPanicMusic();
+        paperSprite.anims.play("paperF", true).setFlipX(false).setPosition(700, 500);
+      }
+      else if (rps == "You lost!") {
+        panicMusic();
+        rockSprite.anims.play("rockF", true).setFlipX(false).setPosition(700, 500);
+        screenShake = true;
+      }
+      else if (rps == "You tied! Round will be restarted!") {
+        opponentScissorsSprite.anims.play("opponentScissorsF", true).setFlipX(false).setPosition(700, 500);
+      }
+      hideImages();
+      showAdd = true;
+    });
+
+    //this function is hides all images
+    function hideImages() {
+      rockImage.setPosition(2000, 256);
+      rockImage.setPosition(2000, 256);
+      paperImage.setPosition(2000, 256);
+      scissorsImage.setPosition(2000, 256);
+      selectionTemp.setPosition(2000, 1);
+
+    }
+
+    //this funtion checks to see if its applicable to play panic music
+    function panicMusic() {
+      panic++
+      if (pScore < oScore && panic == 1) {
+        bgMusic.pause();
+        panicSound.play();
+      }
+    }
+
+    //this function checks to see if its applicable to stop the panic music
+    function stopPanicMusic() {
+      panic = 0
+      if (pScore >= oScore) {
+        panicSound.stop();
+        bgMusic.resume();
+      }
+    }
+
+    //This function adds the images pack
+    function add() {
+      console.log("test");
+      rockImage.setPosition(200, 256);
+      paperImage.setPosition(400, 256);
+      scissorsImage.setPosition(600, 256);
+    }
+
+    //this function resets the sprites by moving them aways from the game
+    function resetPosition() {
+      opponentRockSprite.anims.play("rockF", true).setFlipX(true).setPosition(10500, 400);
+      rockSprite.anims.play("rockF", true).setFlipX(true).setPosition(10500, 400);
+      opponentPaperSprite.anims.play("opponentPaperF", true).setFlipX(true).setPosition(10500, 400);
+      paperSprite.anims.play("paperF", true).setFlipX(true).setPosition(10500, 400);
+      scissorsSprite.anims.play("scissorsF", true).setFlipX(true).setPosition(10005, 400);
+      opponentScissorsSprite.anims.play("opponentScissorsF", true).setFlipX(true).setPosition(10005, 400);
+    }
+
+
+    //Ok so this is function is basically the base game. It has one parameter. If the user presses rock paper or scissors, it will become this functions parameter
+    function rpsBaseGame(rockPaperOrScissors) {
+      //This is an array that stores rock paper scissors. Basically, a random number is generated from 0-2. If it's 0, then rock is called. if its 1, then paper is called. if its 2, then scissors is called. 
+      let opponentRPS = ["paper", "rock", "scissors"];
+      let opponentChoice = opponentRPS[Math.round(Math.random() * 2)];
+      console.log(opponentChoice);
+      //The next several if and else statements basically compares the user clicked button to the random generated rock paper scissors. If you tie, "you tied" is returned. If you win, then "you win" is returned aswell as pScore and roundCount is added by 1. If you lose, "you lose" is returned aswell as oScore and roundCount is added by 1 
+      if (rockPaperOrScissors == opponentChoice) {
+        return "You tied! Round will be restarted!";
+      }
+      else if (opponentChoice == "scissors" && rockPaperOrScissors == "rock") {
+        pScore++
+        roundCount++
+        return "You won!";
+      }
+      else if (opponentChoice == "scissors" && rockPaperOrScissors == "paper") {
+        oScore++
+        roundCount++
+        return "You lost!";
+      }
+      else if (opponentChoice == "paper" && rockPaperOrScissors == "rock") {
+        oScore++
+        roundCount++
+        return "You lost!";
+      }
+      else if (opponentChoice == "paper" && rockPaperOrScissors == "scissors") {
+        pScore++
+        roundCount++
+        return "You won!";
+      }
+      else if (opponentChoice == "rock" && rockPaperOrScissors == "scissors") {
+        oScore++
+        roundCount++
+        return "You lost!";
+      }
+      else if (opponentChoice == "rock" && rockPaperOrScissors == "paper") {
+        pScore++
+        roundCount++
+        return "You won!";
+      }
+    }
+  }
+  //idk what this time delta stuff is. Mr krnic added it.
+  update(time, delta) {
+    this.bgGame.anims.play("bgGame1", true); //plays the background game sprite
+    //Im not sure what's happening here
+    elapsed = endTime - startTime;
+    if (showAdd == false) {
+      startTime = time;
+    }
+    else {
+      endTime = time;
+    }
+    if (screenShake == true && showAdd == true && elapsed >= 2000 && roundCount != rounds) {
+      this.cameras.main.shake(500);
+      screenShake = false
+      showAdd = false;
+      rockImage.setPosition(200, 256);
+      paperImage.setPosition(400, 256);
+      scissorsImage.setPosition(600, 256);
+      roundCountStringTemp = this.add.text(400, 100, roundCount.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      pScoreStringTemp = this.add.text(30, 175, pScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      oScoreStringTemp = this.add.text(750, 175, oScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      selectionTemp.setPosition(120, 50);
+
+    }
+    else if (showAdd == true && elapsed >= 2000 && roundCount != rounds) {
+      showAdd = false;
+      rockImage.setPosition(200, 256);
+      paperImage.setPosition(400, 256);
+      scissorsImage.setPosition(600, 256);
+      roundCountStringTemp = this.add.text(400, 100, roundCount.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      pScoreStringTemp = this.add.text(30, 175, pScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      oScoreStringTemp = this.add.text(750, 175, oScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      selectionTemp.setPosition(120, 50);
+    }
+    else if (showAdd == true && elapsed >= 2000 && roundCount == rounds) {
+      game.scene.start("endScene");
+      game.scene.stop("gameScene");
+    }
+  }
+}
+
+
+/*********************START OF THE INSANE GAME SCENE*********************/
+class insaneGameScene extends Phaser.Scene {
+  constructor(config) {
+    super(config);
+  }
+
+  preload() {
+    this.load.audio("correct", "assets/audio/correct.mp3");
+    this.load.audio("wrong", "assets/audio/wrong.mp3");
+    this.load.audio("buttonClicked", "assets/audio/buttonClick.mp3");
+    //This loads the panic audio
+    this.load.audio("panic", "assets/audio/panicMusic.m4a");
+
+    //These are all the sprites for the base game plus a unique background for the game. 
+    this.load.spritesheet('rockMoving', 'assets/sprites/rock.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('opponentRockMoving', 'assets/sprites/rockOpponent.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('paperMoving', 'assets/sprites/paper.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('opponentPaperMoving', 'assets/sprites/paperOpponent.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('scissorsMoving', 'assets/sprites/scissors.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('opponentScissorsMoving', 'assets/sprites/scissorsOpponent.png', { frameWidth: 200, frameHeight: 200 });
+    this.load.spritesheet('bgGame2', 'assets/sprites/backgroundGame.png', { frameWidth: 640, frameHeight: 464 });
+    this.load.spritesheet('correctAnimation', 'assets/sprites/correct.png', { frameWidth: 200, frameHeight: 195 });
+    this.load.spritesheet('wrongAnimation', 'assets/sprites/wrong.png', { frameWidth: 800, frameHeight: 600 });
+
+    //These are the images of the pixelated rock paper and scissors
+    this.load.image("rock", "assets/IMAGES/rock.png");
+    this.load.image("paper", "assets/IMAGES/paper.png");
+    this.load.image("scissors", "assets/IMAGES/scissors.png");
+  }
+
+  create() {
+    //These are variables that are only necessary for the game. These includes the sprites of the rock paper and scissors
+    let wrong;
+    let correct;
+
+    let correctAnimation;
+    let rockSprite;
+    let opponentRockSprite;
+    let paperSprite;
+    let opponentPaperSprite;
+    let scissorsSprite;
+    let opponentScissorsSprite;
+    let userAnswer;
+
+    //this is the panic audio activation. Basically later in the code if your score is less then the opponents, it will activate
+    let panic = 0;
+
+    //sound declarations
+    buttonClick = this.sound.add("buttonClicked");
+    panicSound = this.sound.add("panic");
+    wrong = this.sound.add("wrong");
+    correct = this.sound.add("correct");
+
+    //This is the background of the game scene. It has to be executed before all the other code. Otherwise, the background would overlap all the text. 
+    this.anims.create({
+      key: "bgGame3",
+      frames: this.anims.generateFrameNumbers("bgGame2", {
+        start: 0,
+        end: 63
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    this.bgGame2 = this.add.sprite(400, 300, 'bgGame3').setScale(1.3);
+
+    //These are all the text ouputed by the game
+    selectionTemp = this.add.text(120, 50, selection, { fontFamily: "DM Sans,sans-serif", fontSize: 32, color: "#FFFFFF", textAlign: "center" })
+    opponentTemp = this.add.text(700, 150, opponent, { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    personTTemp = this.add.text(15, 150, person, { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    if (roundCountStringTemp == null) {
+      roundCountStringTemp = this.add.text(400, 100, roundCount.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    }
+    if (pScoreStringTemp == null) {
+      pScoreStringTemp = this.add.text(30, 175, pScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    }
+    if (oScoreStringTemp == null) {
+      oScoreStringTemp = this.add.text(750, 175, oScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+    }
+
+
+
+
+    //This makes the rock paper scissor images interactible 
+    rockImage = this.physics.add.image(200, 240, "rock").setInteractive();
+    paperImage = this.physics.add.image(400, 240, "paper").setInteractive();
+    scissorsImage = this.physics.add.image(600, 240, "scissors").setInteractive();
+
+    rockImage.setScale(0.5);
+    paperImage.setScale(0.5);
+    scissorsImage.setScale(0.4);
+
+    this.anims.create({
+      key: "wrongF",
+      frames: this.anims.generateFrameNumbers("wrongAnimation", {
+        start: 4,
+        end: 74
+      }),
+      frameRate: 30,
+      repeat: 0
+    });
+    wrongAnimation = this.add.sprite(1000, 400, 'wrongAnimation');
+
+    this.anims.create({
+      key: "correctF",
+      frames: this.anims.generateFrameNumbers("correctAnimation", {
+        start: 0,
+        end: 20
+      }),
+      frameRate: 30,
+      repeat: 0
+    });
+    correctAnimation = this.add.sprite(1000, 400, 'correctAnimation');
+
+    //Rock sprite
+    this.anims.create({
+      key: "rockF",
+      frames: this.anims.generateFrameNumbers("rockMoving", {
+        start: 0,
+        end: 31
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    rockSprite = this.add.sprite(10500, 400, 'rockMoving').setInteractive();
+
+    //The opponents rock sprite
+    this.anims.create({
+      key: "opponentRockF",
+      frames: this.anims.generateFrameNumbers("opponentRockMoving", {
+        start: 0,
+        end: 31
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    opponentRockSprite = this.add.sprite(10500, 400, 'opponentRockMoving').setInteractive();
+
+    //Paper sprite
+    this.anims.create({
+      key: "paperF",
+      frames: this.anims.generateFrameNumbers("paperMoving", {
+        start: 0,
+        end: 41
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    paperSprite = this.add.sprite(10500, 400, 'paperMoving').setInteractive();
+
+    //The opponents paper sprite
+    this.anims.create({
+      key: "opponentPaperF",
+      frames: this.anims.generateFrameNumbers("opponentPaperMoving", {
+        start: 0,
+        end: 41
+      }),
+      frameRate: 21,
+      repeat: 0
+    });
+    opponentPaperSprite = this.add.sprite(10500, 400, 'opponentPaperMoving').setInteractive();
+
+    //scissors sprite
+    this.anims.create({
+      key: "scissorsF",
+      frames: this.anims.generateFrameNumbers("scissorsMoving", {
+        start: 0,
+        end: 42
+      }),
+      frameRate: 23,
+      repeat: 0
+    });
+    scissorsSprite = this.add.sprite(10500, 400, 'opponentScissorsMoving').setInteractive();
+
+    //the opponent scissors sprite
+    this.anims.create({
+      key: "opponentScissorsF",
+      frames: this.anims.generateFrameNumbers("opponentScissorsMoving", {
+        start: 0,
+        end: 42
+      }),
+      frameRate: 18,
+      repeat: 0
+    });
+    opponentScissorsSprite = this.add.sprite(10500, 400, 'opponentScissorsMoving').setInteractive();
+
+    //This is when the user interacts with rock image
+    rockImage.on("pointerdown", function(pointer) {
+    });
+    rockImage.on("pointerup", function(pointer) {
+      //This destroys all the text in the game
+      roundCountStringTemp.destroy();
+      oScoreStringTemp.destroy();
+      destroySprite();
+      pScoreStringTemp.destroy();
+      buttonClick.play();
+      //resets the position of all sprites
+      resetPosition();
+      //takes the result of the rpsBaseGame function and puts it in the rps variable
+      let rps = rpsBaseGame(rock);
+      //Plays the rock sprite at the set position
+      rockSprite.anims.play("rockF", true).setFlipX(true).setPosition(105, 500);
+      //If the function says "you won" then it checks stoppanicmusic to see if your score exceed the opponents. If it doesnt, panic music continues to play. 
+      if (rps == "You won!") {
+        insaneModeQuestionGenerator(rps);
+        stopPanicMusic();
+        //Plays the sprite which you won from
+        scissorsSprite.anims.play("scissorsF", true).setFlipX(false).setPosition(700, 500);
+      }
+      //If the function says "you lost" then it checks panicmusic to see if your score is less then the opponents. If it isnt, bgmusic continus to play. 
+      else if (rps == "You lost!") {
+        panicMusic();
+        paperSprite.anims.play("paperF", true).setFlipX(false).setPosition(700, 500);
+        screenShake = true; //shakes the screen to indicate you lost a point
+      }
+      //If the function say "you tied"
+      else if (rps == "You tied! Round will be restarted!") {
+        opponentRockSprite.anims.play("opponentRockF", true).setFlipX(false).setPosition(700, 500);
+      }
+      hideImages();
+      showAdd = true;
+    });
+
+    //Refer to the rock comments for functionality
+    paperImage.on("pointerdown", function(pointer) {
+    });
+    paperImage.on("pointerup", function(pointer) {
+      roundCountStringTemp.destroy();
+      oScoreStringTemp.destroy();
+      destroySprite();
+      pScoreStringTemp.destroy();
+      buttonClick.play();
+      resetPosition();
+      let rps = rpsBaseGame(paper);
+      paperSprite.anims.play("paperF", true).setFlipX(true).setPosition(105, 500);
+      if (rps == "You won!") {
+        insaneModeQuestionGenerator(rps);
+        stopPanicMusic();
+        rockSprite.anims.play("rockF", true).setFlipX(false).setPosition(700, 500);
+      }
+      else if (rps == "You lost!") {
+        panicMusic();
+        scissorsSprite.anims.play("scissorsF", true).setFlipX(false).setPosition(700, 500);
+        screenShake = true;
+      }
+      else if (rps == "You tied! Round will be restarted!") {
+        opponentRockSprite.anims.play("opponentPaperF", true).setFlipX(false).setPosition(700, 500);
+      }
+      hideImages();
+      showAdd = true;
+    });
+
+    //Refer to the rock comments for functionality
+    scissorsImage.on("pointerdown", function(pointer) {
+    });
+    scissorsImage.on("pointerup", function(pointer) {
+      roundCountStringTemp.destroy();
+      oScoreStringTemp.destroy();
+      destroySprite();
+      pScoreStringTemp.destroy();
+      buttonClick.play();
+      resetPosition();
+      let rps = rpsBaseGame(scissors);
+      scissorsSprite.anims.play("scissorsF", true).setFlipX(true).setPosition(105, 500);
+      if (rps == "You won!") {
+        insaneModeQuestionGenerator(rps);
+        stopPanicMusic();
+        paperSprite.anims.play("paperF", true).setFlipX(false).setPosition(700, 500);
+      }
+      else if (rps == "You lost!") {
+        panicMusic();
+        rockSprite.anims.play("rockF", true).setFlipX(false).setPosition(700, 500);
+        screenShake = true;
+      }
+      else if (rps == "You tied! Round will be restarted!") {
+        opponentScissorsSprite.anims.play("opponentScissorsF", true).setFlipX(false).setPosition(700, 500);
+        screenShake = true;
+      }
+      hideImages();
+      showAdd = true;
+    });
+
+
+    function insaneModeQuestionGenerator(rockPaperScissors) {
+      let tempRandomNumber = 0;
+      if (rockPaperScissors == "You won!") {
+        tempRandomNumber = Math.round(Math.random() * 16);
+        userAnswer = prompt(questionArray[tempRandomNumber]);
+        if (answerArray[tempRandomNumber] != userAnswer.toLowerCase()) {
+          oScore++
+          pScore--
+          wrong.play();
+          wrongAnimation.anims.play("wrongF", true).setPosition(410, 145);
+          wrongAnimation.setScale(0.1);
+        }
+        else {
+          correct.play();
+          correctAnimation.anims.play("correctF", true).setPosition(405, 145);
+          correctAnimation.setScale(0.25);
+        }
+      }
+    }
+
+    //this function is hides all images
+    function hideImages() {
+      rockImage.setPosition(2000, 256);
+      rockImage.setPosition(2000, 256);
+      paperImage.setPosition(2000, 256);
+      scissorsImage.setPosition(2000, 256);
+      selectionTemp.setPosition(2000, 1);
+    }
+
+    function destroySprite() {
+      correctAnimation.anims.play("correctF", true).setPosition(4005, 145);
+      wrongAnimation.anims.play("wrongF", true).setPosition(4005, 145);
+    }
+
+    //this funtion checks to see if its applicable to play panic music
+    function panicMusic() {
+      panic++
+      if (pScore < oScore && panic == 1) {
+        bgMusic.pause();
+        panicSound.play();
+      }
+    }
+
+    //this function checks to see if its applicable to stop the panic music
+    function stopPanicMusic() {
+      panic = 0
+      if (pScore >= oScore) {
+        panicSound.stop();
+        bgMusic.resume();
+      }
+    }
+
+    //This function adds the images pack
+    function add() {
+      console.log("test");
+      rockImage.setPosition(200, 256);
+      paperImage.setPosition(400, 256);
+      scissorsImage.setPosition(600, 256);
+    }
+
+    //this function resets the sprites by moving them aways from the game
+    function resetPosition() {
+      opponentRockSprite.anims.play("rockF", true).setFlipX(true).setPosition(10500, 400);
+      rockSprite.anims.play("rockF", true).setFlipX(true).setPosition(10500, 400);
+      opponentPaperSprite.anims.play("opponentPaperF", true).setFlipX(true).setPosition(10500, 400);
+      paperSprite.anims.play("paperF", true).setFlipX(true).setPosition(10500, 400);
+      scissorsSprite.anims.play("scissorsF", true).setFlipX(true).setPosition(10005, 400);
+      opponentScissorsSprite.anims.play("opponentScissorsF", true).setFlipX(true).setPosition(10005, 400);
+    }
+
+
+    //Ok so this is function is basically the base game. It has one parameter. If the user presses rock paper or scissors, it will become this functions parameter
+    function rpsBaseGame(rockPaperOrScissors) {
+      //This is an array that stores rock paper scissors. Basically, a random number is generated from 0-2. If it's 0, then rock is called. if its 1, then paper is called. if its 2, then scissors is called. 
+      let opponentRPS = ["paper", "rock", "scissors"];
+      let opponentChoice = opponentRPS[Math.round(Math.random() * 2)];
+      console.log(opponentChoice);
+      //The next several if and else statements basically compares the user clicked button to the random generated rock paper scissors. If you tie, "you tied" is returned. If you win, then "you win" is returned aswell as pScore and roundCount is added by 1. If you lose, "you lose" is returned aswell as oScore and roundCount is added by 1 
+      if (rockPaperOrScissors == opponentChoice) {
+        oScore++
+        roundCount++
+        return "You tied! Round will be restarted!";
+      }
+      else if (opponentChoice == "scissors" && rockPaperOrScissors == "rock") {
+        pScore++
+        roundCount++
+        return "You won!";
+      }
+      else if (opponentChoice == "scissors" && rockPaperOrScissors == "paper") {
+        oScore++
+        roundCount++
+        return "You lost!";
+      }
+      else if (opponentChoice == "paper" && rockPaperOrScissors == "rock") {
+        oScore++
+        roundCount++
+        return "You lost!";
+      }
+      else if (opponentChoice == "paper" && rockPaperOrScissors == "scissors") {
+        pScore++
+        roundCount++
+        return "You won!";
+      }
+      else if (opponentChoice == "rock" && rockPaperOrScissors == "scissors") {
+        oScore++
+        roundCount++
+        return "You lost!";
+      }
+      else if (opponentChoice == "rock" && rockPaperOrScissors == "paper") {
+        pScore++
+        roundCount++
+        return "You won!";
+      }
+    }
+  }
+  //idk what this time delta stuff is. Mr krnic added it.
+  update(time, delta) {
+    this.bgGame2.anims.play("bgGame3", true); //plays the background game sprite
+    //Im not sure what's happening here
+    elapsed = endTime - startTime;
+    if (showAdd == false) {
+      startTime = time;
+    }
+    else {
+      endTime = time;
+    }
+    if (screenShake == true && showAdd == true && elapsed >= 2000 && roundCount != rounds) {
+      this.cameras.main.shake(500);
+      screenShake = false
+      showAdd = false;
+      rockImage.setPosition(200, 256);
+      paperImage.setPosition(400, 256);
+      scissorsImage.setPosition(600, 256);
+      roundCountStringTemp = this.add.text(400, 100, roundCount.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      pScoreStringTemp = this.add.text(30, 175, pScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      oScoreStringTemp = this.add.text(750, 175, oScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      selectionTemp.setPosition(120, 50);
+
+    }
+    else if (showAdd == true && elapsed >= 2000 && roundCount != rounds) {
+      showAdd = false;
+      rockImage.setPosition(200, 256);
+      paperImage.setPosition(400, 256);
+      scissorsImage.setPosition(600, 256);
+      roundCountStringTemp = this.add.text(400, 100, roundCount.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      pScoreStringTemp = this.add.text(30, 175, pScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      oScoreStringTemp = this.add.text(750, 175, oScore.toString(), { fontFamily: "DM Sans,sans-serif", fontSize: 20, color: "#FFFFFF", textAlign: "center" })
+      selectionTemp.setPosition(120, 50);
+    }
+    else if (showAdd == true && elapsed >= 2000 && roundCount == rounds) {
+      this.bgGame2.destroy();
+      game.scene.start("endScene");
+      game.scene.stop("insaneGameScene");
+    }
+  }
+}
+
+//END SCENE
+class endScene extends Phaser.Scene {
+  constructor(config) {
+    super(config);
+  }
+  preload() {
+    this.load.image("replay", "assets/IMAGES/replay.png");
+
+    this.load.audio("buttonClicked", "assets/audio/buttonClick.mp3");
+    this.load.audio("victory", "assets/audio/victory.mp3");
+    this.load.audio("defeat", "assets/audio/defeat.mp3");
+  }
+  create() {
+    let replayButton;
+    let victory = "You won! \n Replay?";
+    let defeat = "You lost! \nReplay?";
+
+
+    nameArray.push(person);
+    pScoreArray.push(pScore);
+    oScoreArray.push(oScore);
+    roundsArray.push(rounds);
+    tempArray.push(pScore);
+
+    console.log(nameArray);
+    console.log(pScoreArray);
+    console.log(oScoreArray);
+    console.log(roundsArray);
+    console.log(tempArray);
+
+    selectionTemp = "";
+    opponentTemp = "";
+    personTTemp = "";
+    roundCountStringTemp = "";
+    pScoreStringTemp = "";
+    oScoreStringTemp = "";
+
+    replayCount++
+
+    replayButton = this.physics.add.image(410, 460, "replay").setInteractive();
+    // console.log(person);
+    // console.log(pScore);
+    // console.log(oScore);
+    // console.log(rounds);
+    if (replayCount >= 1) {
+      document.getElementById('PlayerName1').innerHTML = nameArray[pScoreArray.indexOf(NumberSorted(tempArray)[0])];
+      document.getElementById('PlayerWins1').innerHTML = pScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[0])];
+      document.getElementById('PlayerLosses1').innerHTML = oScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[0])];
+      document.getElementById('RoundsPlayed1').innerHTML = roundsArray[pScoreArray.indexOf(NumberSorted(tempArray)[0])];
+      if (PlayerName1 != person) {
+        document.getElementById('PlayerName1').innerHTML = nameArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[0])];
+        document.getElementById('PlayerWins1').innerHTML = pScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[0])];
+        document.getElementById('PlayerLosses1').innerHTML = oScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[0])];
+        document.getElementById('RoundsPlayed1').innerHTML = roundsArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[0])];
+      }
+    }
+    if (replayCount >= 2) {
+      document.getElementById('PlayerName2').innerHTML = nameArray[pScoreArray.indexOf(NumberSorted(tempArray)[1])];
+      document.getElementById('PlayerWins2').innerHTML = pScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[1])];
+      document.getElementById('PlayerLosses2').innerHTML = oScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[1])];
+      document.getElementById('RoundsPlayed2').innerHTML = roundsArray[pScoreArray.indexOf(NumberSorted(tempArray)[1])];
+      if (PlayerName2 != person) {
+        document.getElementById('PlayerName2').innerHTML = nameArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[1])];
+        document.getElementById('PlayerWins2').innerHTML = pScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[1])];
+        document.getElementById('PlayerLosses2').innerHTML = oScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[1])];
+        document.getElementById('RoundsPlayed2').innerHTML = roundsArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[1])];
+      }
+    }
+    if (replayCount >= 3) {
+      document.getElementById('PlayerName3').innerHTML = nameArray[pScoreArray.indexOf(NumberSorted(tempArray)[2])];
+      document.getElementById('PlayerWins3').innerHTML = pScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[2])];
+      document.getElementById('PlayerLosses3').innerHTML = oScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[2])];
+      document.getElementById('RoundsPlayed3').innerHTML = roundsArray[pScoreArray.indexOf(NumberSorted(tempArray)[2])];
+      if (PlayerName3 != person) {
+        document.getElementById('PlayerName3').innerHTML = nameArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[2])];
+        document.getElementById('PlayerWins3').innerHTML = pScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[2])];
+        document.getElementById('PlayerLosses3').innerHTML = oScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[2])];
+        document.getElementById('RoundsPlayed3').innerHTML = roundsArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[2])];
+      }
+    }
+    if (replayCount >= 4) {
+      document.getElementById('PlayerName4').innerHTML = nameArray[pScoreArray.indexOf(NumberSorted(tempArray)[3])];
+      document.getElementById('PlayerWins4').innerHTML = pScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[3])];
+      document.getElementById('PlayerLosses4').innerHTML = oScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[3])];
+      document.getElementById('RoundsPlayed4').innerHTML = roundsArray[pScoreArray.indexOf(NumberSorted(tempArray)[3])];
+      if (PlayerName4 != person) {
+        document.getElementById('PlayerName4').innerHTML = nameArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[3])];
+        document.getElementById('PlayerWins4').innerHTML = pScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[3])];
+        document.getElementById('PlayerLosses4').innerHTML = oScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[3])];
+        document.getElementById('RoundsPlayed4').innerHTML = roundsArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[3])];
+      }
+    }
+    if (replayCount >= 5) {
+      document.getElementById('PlayerName5').innerHTML = nameArray[pScoreArray.indexOf(NumberSorted(tempArray)[4])];
+      document.getElementById('PlayerWins5').innerHTML = pScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[4])];
+      document.getElementById('PlayerLosses5').innerHTML = oScoreArray[pScoreArray.indexOf(NumberSorted(tempArray)[4])];
+      document.getElementById('RoundsPlayed5').innerHTML = roundsArray[pScoreArray.indexOf(NumberSorted(tempArray)[4])];
+      if (PlayerName1 != person) {
+        document.getElementById('PlayerName5').innerHTML = nameArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[4])];
+        document.getElementById('PlayerWins5').innerHTML = pScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[4])];
+        document.getElementById('PlayerLosses5').innerHTML = oScoreArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[4])];
+        document.getElementById('RoundsPlayed5').innerHTML = roundsArray[pScoreArray.lastIndexOf(NumberSorted(tempArray)[4])];
+      }
+    }
+    buttonClick = this.sound.add("buttonClicked")
+
+    replayButton.on("pointerdown", function(pointer) {
+      this.setTint(925252);
+    });//end of pointerdown event
+    replayButton.on("pointerup", function(pointer) {
+      buttonClick.play();
+      this.clearTint();
+      pScore = 0
+      oScore = 0
+      person = "";
+      rounds = 0;
+      roundCount = 0
+      roundCountString = ""
+      game.scene.start("initialScene");
+      game.scene.stop("endScene");
+    });
+
+
+    if (pScore > oScore) {
+      victory = this.add.text(340, 50, victory, { fontFamily: "DM Sans,sans-serif", fontSize: 32, color: "#FFFFFF", textAlign: "center" })
+      this.victory = this.sound.play("victory")
+      bgMusic.stop();
+    }
+    if (pScore < oScore) {
+      defeat = this.add.text(340, 50, defeat, { fontFamily: "DM Sans,sans-serif", fontSize: 32, color: "#FFFFFF", textAlign: "center" })
+      this.defeat = this.sound.play("defeat")
+      panicSound.stop();
+      bgMusic.stop();
+    }
+    function NumberSorted(array) {
+      for (let x = 0; x < array.length; x++) { //Passes through the list of array index
+        for (let y = 0; y <= array.length - 2; y++) { //This is used to compaire paires
+          if (array[y] < array[y + 1]) {
+            let tempvar = array[y]; //Create a temporary variable, that stores the number being switched. If this variable wasn't here, the number being switched will be lost.
+            array[y] = array[y + 1]
+            array[y + 1] = tempvar;
+          }
+        }
+      }
+      return array;
+    }
+  }
+
+  update() {
+    
+    }
+    function NumberSorted(array) {
+      for (let x = 0; x < array.length; x++) { //Passes through the list of array index
+        for (let y = 0; y <= array.length - 2; y++) { //This is used to compaire paires
+          if (array[y] < array[y + 1]) {
+            let tempvar = array[y]; //Create a temporary variable, that stores the number being switched. If this variable wasn't here, the number being switched will be lost.
+            array[y] = array[y + 1]
+            array[y + 1] = tempvar;
+          }
+        }
+      }
+      return array;
+    }
+  }
+}
+
+var config = {
+  type: Phaser.AUTO,
+  parent: 'phaser-example',
+  width: 800,
+  height: 600,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      debug: false
+    }
+  }
+};
+var game = new Phaser.Game(config);
+game.scene.add("initialScene", initializingScene)
+game.scene.add("startScene", startScene);
+game.scene.add("menuScene", menuScene);
+game.scene.add("gameScene", gameScene);
+game.scene.add("insaneGameScene", insaneGameScene);
+game.scene.add("endScene", endScene);
+game.scene.start("initialScene");
+// game.scene.start("endScene");
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+/*
+ Akaran, Kaven, Sansar 
+ 6/6/2022
+ Style page
+ This page contains styling for the game page
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#aad5c9;
+}
+
+canvas{
+  position:absolute;
+  left:27.5%;
+  margin: 5% auto 0px auto;
+  border-style: solid;
+  border-width:thick;
+  display: block;
+}
+
+.HeaderBox{
+  height: 150px;
+  margin: 20px auto 0px auto;
+  max-width: 85%;
+}
+
+.title {
+  font-size: 90px;
+  font-family: 'Odibee Sans', cursive;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+  text-align: center;
+}
+
+.scoreboardoutline{
+  float: right;
+  position: static;
+  width: 450px;
+  height: 400px; 
+  background-color:coral;
+  margin: 10% 2.5% 0px 0px;
+  border-style: solid;
+  border-width:thick;
+}
+
+.scoreheaderbox{
+  max-width: 90%;
+  max-height: 125px;
+  margin: 0px auto 0px auto;
+}
+
+.scoreboardHeader {
+  font-size: 25px;
+  font-family: 'DM Sans', sans-serif;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+  text-align:center;
+}
+
+.scorenamerows{
+  max-width: 100%;
+  height: 50px;
+}
+
+.scoreboxnamerows{
+  width: 110px;
+  height: 100%;
+  float:left;
+  border-style:solid;
+  border-width: 1px;
+}
+
+.scoreheadertext{
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: 'DM Sans', sans-serif;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+}
+
+/* usernames collum */
+
+.UsernameCollum{
+  border-style:solid;
+  width: 110px;
+  height: 80%;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+#PlayerName1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Rounds Played collum */
+
+.RoundsCollum{
+  border-style:solid;
+  width: 110px;
+  height: 80%;
+  float:left;
+  border-width: 1px;
+}
+
+.RoundsCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+#RoundsPlayed1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Wins collum */
+
+.WinsCollum{
+ border-style:solid;
+ width: 110px;
+ height: 80%;
+ float:left;
+ border-width: 1px;
+}
+
+.WinsCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+#PlayerWins1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Losses collum */
+
+.LossesCollum{
+  border-style:solid;
+  width: 110px;
+  height: 80%;
+  float:left;
+  border-width: 1px;
+}
+
+.LossesCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+#PlayerLosses1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%; 
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Hover effect on the cells */
+.UsernameCells1:hover,
+.RoundsCells1:hover,
+.WinsCells1:hover,
+.LossesCells1:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+.UsernameCells2:hover,
+.RoundsCells2:hover,
+.WinsCells2:hover,
+.LossesCells2:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+.UsernameCells3:hover,
+.RoundsCells3:hover,
+.WinsCells3:hover,
+.LossesCells3:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black; 
+  transition: all 0.2s ease;
+}
+
+.UsernameCells4:hover,
+.RoundsCells4:hover,
+.WinsCells4:hover,
+.LossesCells4:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+.UsernameCells5:hover,
+.RoundsCells5:hover,
+.WinsCells5:hover,
+.LossesCells5:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+/* This is our nav bar */
+.SidebarLength{
+  height: 100%;
+  width: 330px;
+  position:fixed;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.SidebarLength .Menu{
+  position: absolute;
+  left: 20px;
+  height: 45px;
+  width: 45px;
+  z-index: 999;
+  color: white;
+  background: #849094;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 23px;
+  transition: all 0.6s ease;
+}
+
+#btn:checked ~ .Menu{
+  left: 247px;
+}
+
+#btn:checked ~ .Menu i:before{
+  content: "\f00d";
+}
+
+.SidebarLength #sidebar{
+  position: relative;
+  height: 100%;
+  width: 270px;
+  background: #849094;
+  overflow: hidden;
+  left: -270px;
+  transition: all 0.6s ease;
+  margin-top: -5%;
+}
+
+#btn:checked ~ #sidebar{
+  left: 0;
+}
+
+#sidebar .BarTitle{
+color:white;
+font-size: 25px;
+font-weight: 600;
+line-height: 65px;
+background-color: #545F66;
+text-align: center;
+border-bottom: 1px solid black;
+}
+
+#sidebar .Items{
+position: relative;
+background: #849094;
+height: 100%;
+width: 100%;
+list-style: none;
+}
+
+#sidebar .Items li{
+text-align:center;
+line-height: 50px;
+border-top: 1px solid rgba(255,255,255,0.1);
+border-bottom: 1px solid black;
+transition: all 0.5s ease;
+}
+
+#sidebar .Items li:hover{
+border-top: 1px solid transparent;
+border-bottom: 1px solid transparent;
+box-shadow: 0 0 10px 3px black;
+}
+
+#sidebar .Items li a{
+color:white;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+height: 100%;
+width: 100%;
+display: block;
+}
+
+#sidebar .Items li a i{
+margin-right:20px;
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  How To Play
+  This page contains the code for the ISU website
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>How To Play</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../IMAGES/Question.png">
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="../CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="../NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="index.html">How To Play</a></li>
+          <li><a href="../GAME/index.html">Game</a></li>
+          <li><a href="../code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="HP_IMG" src="../IMAGES/HTP.gif">
+    </div>
+    <br>
+    <!-- How to play divs-->
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Enter your Username</h1>
+      </div>
+      <div class="HTPTextBox1">
+        <p class="HTPText">In the intermission screen, the user will get an alert, where they will be able to type in their desired username. Note, the username must be all in words, and have no numbers or symbols.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/Intermission.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Start Game</h1>
+      </div>
+      <div class="HTPTextBox2and3">
+        <p class="HTPText">The user presses start to be able to choose which game modes to play.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/PresstoPlay.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Gamemodes</h1>
+      </div>
+      <div class="HTPTextBox2and3">
+        <p class="HTPText">In Rock Paper Scissors Remastered, there are 2 game modes, Classic and Insane mode.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/ChooseGamemode.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPINBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Picking Amount of Rounds</h1>
+      </div>
+      <div class="HTPTextBox4">
+        <p class="HTPText">After the user picks their desired game mode, they will get an alert asking how many rounds they would like to play. Only odd numbers are accepted, as the winner cannot be decided with an even number of rounds.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/ChooseRoundWithAlert.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Classic Mode</h1>
+      </div>
+      <div class="HTPTextBox5">
+        <p class="HTPText">Classic mode is normal rock Paper Scissors, where rock beats scissors, paper beats rock, scissors beat paper. If there happens to be a tie, such as Rock and Rock, the round will be replayed.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/TheGameEasy.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPINBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Insane Mode</h1>
+      </div>
+      <div class="HTPTextBox6">
+        <p class="HTPText">In Insane mode, the same rules still apply, where rock beats scissors, paper beats rock, scissors beat paper. The twist in Insane mode is that when the user wins a round, they will need to answer a random question to be able to get the win of the round. If the user answers incorrectly, they lose the round. If a tie occurs, the user will also be penalized and lose the round.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/TheGameHardMode.PNG">
+      </div>
+    </div>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">End Scene</h1>
+      </div>
+      <div class="HTPTextBox2and3">
+        <p class="HTPText">This is the end scene. If you had a greater score then the opponent, you will be presented with a victory message. Otherwise, it would show you lost. </p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/end.png">
+      </div>
+    </div>
+    <br>
+  </body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  New Functions
+  This page contains the code for the ISU website
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Rough Sketches</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <link rel="icon" href="../IMAGES/New.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="../CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="index.html">New Functions</a></li>
+          <li><a href="../HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="../GAME/index.html">Game</a></li>
+          <li><a href="../code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="CODESHHP_IMG" src="../IMAGES/Function.gif">
+      <div class="CODESHHomepageHeaderBox">
+        <h1 class="HopePageHeader">New Functions</h1>
+      </div>
+    </div>
+    <br>
+    <!--Below is the New Functions Stuff -->
+    <div class="NF1BoxOutline">
+      <div class="NF1HeaderBox">
+        <h1 class="NFHeader">getElementByID</h1>
+      </div>
+      <div class="NF1TextBox">
+        <p class="NFText">This brand-new function getElementId basically converts JavaScript variables into HTML. These brand-new variables can then be used to make a scoreboard in HTML. </p>
+      </div>
+      <div class="NF1IMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/getElementById.png">
+      </div>
+    </div>
+    <br>
+    <div class="NFBoxOutline">
+      <div class="NFHeaderBox">
+        <h1 class="NFHeader">Pause Function</h1>
+      </div>
+      <div class="NF2TextBox">
+        <p class="NFText">The pause function's main purpose is to pause audio files from playing. For us, it's used to pause the audio in the background, and then to initiate the panic audio.</p>
+      </div>
+      <div class="NFIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/pauseFunction.png">
+      </div>
+    </div>
+    <br>
+    <div class="NFBoxOutline">
+      <div class="NFHeaderBox">
+        <h1 class="NFHeader">Resume Function</h1>
+      </div>
+      <div class="NF3TextBox">
+        <p class="NFText">The resume function's main purpose is to resume audio that was paused from the pause function. We use this function to resume the bgMusic after the user's score is > or = to the opponent.</p>
+      </div>
+      <div class="NFIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/resumeFunction.png">
+      </div>
+    </div>
+    <br>
+    <div class="NFBoxOutline">
+      <div class="NFHeaderBox">
+        <h1 class="NFHeader">Stop Function</h1>
+      </div>
+      <div class="NF4TextBox">
+        <p class="NFText">This function stops audio from playing completely. We use this to stop the panic audio after the user score is > or = to the opponents</p>
+      </div>
+      <div class="NFIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/stopFunction.png">
+      </div>
+    </div>
+    <br>
+    <div class="NF5BoxOutline">
+      <div class="NF5HeaderBox">
+        <h1 class="NFHeader">Destroy Function</h1>
+      </div>
+      <div class="NF5TextBox">
+        <p class="NFText">This destroy function basically removes a specified text from existing. We need this to remove certain text from appearing on the screen  </p>
+      </div>
+      <div class="NF5IMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/destroyFunction.png">
+      </div>
+    </div>
+    <br>
+  </body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ /* 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  New Function styling
+  This the stylzing page for showing new functions we learned
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#aad5c9;
+}
+
+.CODESHHP_IMG{
+  width: 100%;
+  height: 350px;
+  position:relative;
+  border-radius: 3%;
+  opacity: 0.8;
+  z-index:-1;
+}
+
+.CODESHHomepageHeaderBox{
+  max-width: 85%;
+  height: 100px;
+  text-align: center;
+  margin: -175px auto 0px auto;
+}
+
+.HomepageBox{
+  margin: 15px auto 0px auto;
+  border-style:solid;
+  border-size: 5px;
+  border-color:white;
+  border-radius: 3%;
+  height: 356px;
+  max-width: 85%;
+}
+
+.HopePageHeader{
+  font-size: 75px;
+  font-family: 'Odibee Sans', cursive;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+}
+
+.NFBoxOutline{
+  margin: 15px auto 0px auto; /* top right bottom left */
+  border-style:solid;
+  border-color: white;
+  height: 425px;
+  max-width: 85%;
+  background-color: #808f99;  
+}
+
+.NFHeaderBox{
+  height:15%;
+  width: 100%;
+  border-style:solid;  
+}
+
+.NFHeader{
+  text-align: center;
+  font-size: 38px;
+  margin-top: 0.5%;
+  color: white; 
+}
+
+.NFTextBox{
+  margin: 25px auto 0px auto;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 75%;
+  float: left;
+  margin-left:3%;  
+}
+
+.NFText{
+  font-size: 28px;
+  color: white;
+  text-align: justify;
+  height: 85%;
+  width: 85%;
+  margin: 20px auto 0px auto;  
+}
+
+.NFIMGBOX{
+  margin: 25px auto 0px auto;
+  border-style:solid;
+  width: 35%;
+  height: 75%;
+  float: right;
+  margin-right:5%;  
+}
+
+.ScreenshotImage{
+  width: 100%;
+  height: 100%;  
+}
+
+.NF1BoxOutline{
+  margin: 15px auto 0px auto;
+  border-style:solid;
+  border-color: white;
+  height: 425px;
+  max-width: 85%;
+  background-color: #808f99;   
+}
+
+.NF1HeaderBox{
+  height: 16%;
+  width: 100%;
+  border-style:solid;   
+}
+
+.NF1TextBox{
+  margin: 120px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 32%;
+  float: left;
+}
+
+.NF1IMGBOX{
+  margin: 25px auto 0px auto;
+  border-style:solid;
+  width: 38%;
+  height: 68%;
+  float: right;
+  margin-right:5%;    
+}
+
+
+.NF2TextBox{
+  margin: 120px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 32%;
+  float: left;
+}
+
+
+.NF3TextBox{
+  margin: 105px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 39%;
+  float: left;
+}
+
+.NF4TextBox{
+  margin: 120px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 32%;
+  float: left;
+}
+
+.NF5BoxOutline{
+  margin: 15px auto 0px auto;
+  border-style:solid;
+  border-color: white;
+  height: 600px;
+  max-width: 85%;
+  background-color: #808f99;   
+}
+
+.NF5HeaderBox{
+  height:12%;
+  width: 100%;
+  border-style:solid;   
+}
+
+.NF5TextBox{
+  margin: 175px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 22%;
+  float: left;
+}
+
+.NF5IMGBOX{
+  margin: 25px auto 0px auto;
+  border-style:solid;
+  width: 35%;
+  height: 75%;
+  float: right;
+  margin-right:5%;    
+}
+
+.NFIMGBOX:hover,
+.NF1IMGBOX:hover,
+.NF5IMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;    
+}
+
+.NF1TextBox:hover,
+.NF2TextBox:hover,
+.NF3TextBox:hover,
+.NF4TextBox:hover,
+.NF5TextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;   
+}
+
+/* This is our nav bar */
+.SidebarLength{
+  height: 100%;
+  width: 330px;
+  position:fixed;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.SidebarLength .Menu{
+  position: absolute;
+  left: 20px;
+  height: 45px;
+  width: 45px;
+  z-index: 999;
+  color: white;
+  background: #849094;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 23px;
+  transition: all 0.6s ease;
+}
+
+#btn:checked ~ .Menu{
+  left: 247px;
+}
+
+#btn:checked ~ .Menu i:before{
+  content: "\f00d";
+}
+
+.SidebarLength #sidebar{
+  position: relative;
+  height: 100%;
+  width: 270px;
+  background: #849094;
+  overflow: hidden;
+  left: -270px;
+  transition: all 0.6s ease;
+  margin-top: -4%;
+}
+
+#btn:checked ~ #sidebar{
+  left: 0;
+}
+
+#sidebar .BarTitle{
+color:white;
+font-size: 25px;
+font-weight: 600;
+line-height: 65px;
+background-color: #545F66;
+text-align: center;
+border-bottom: 1px solid black;
+}
+
+#sidebar .Items{
+position: relative;
+background: #849094;
+height: 100%;
+width: 100%;
+list-style: none;
+}
+
+#sidebar .Items li{
+text-align:center;
+line-height: 50px;
+border-top: 1px solid rgba(255,255,255,0.1);
+border-bottom: 1px solid black;
+transition: all 0.5s ease;
+}
+
+#sidebar .Items li:hover{
+border-top: 1px solid transparent;
+border-bottom: 1px solid transparent;
+box-shadow: 0 0 10px 3px black;
+}
+
+#sidebar .Items li a{
+color:white;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+height: 100%;
+width: 100%;
+display: block;
+}
+
+#sidebar .Items li a i{
+margin-right:20px;
+}
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Rough Sketches
+  This page contains for the rough sketches page
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Rough Sketches</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <link rel="icon" href="../IMAGES/Sketching.png">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Rough Sketches</a></li>
+          <li><a href="../CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="../NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="../HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="../GAME/index.html">Game</a></li>
+          <li><a href="../code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="RSHP_IMG" src="../IMAGES/RSIMG.gif" >
+      <div class="HomepageHeaderBox">
+        <h1 class="HopePageHeader" style="z-index:-1">Rough Sketches</h1>
+      </div>
+    </div>
+    <br>
+    <div class="ScreenShotBoxOutline">
+      <div class="ScreenShotHeaderBox">
+        <h1 class="ScreenShotHeader">Screen 1</h1>
+      </div>
+      <div class="ScreenShotTextBox">
+        <p class="ScreenShotText">Screen 1 is our Initializing scene. In this scene, we need the user to type in their username for the game.</p>
+      </div>
+      <div class="ScreenShotImageBoxRightSide">
+        <img class="ScreenshotImage" src="SKETCHES/INITIALIZING_SCENE.png">
+      </div>
+    </div>
+    <br>
+    <div class="ScreenShotBoxOutline">
+      <div class="ScreenShotHeaderBox">
+        <h1 class="ScreenShotHeader">Screen 2</h1>
+      </div>
+      <div class="ScreenShotTextBox">
+        <p class="ScreenShotText">Screen 2 is our Start Game scene. In this scene, we display a sprite image, and a button to start to play the game.</p>
+      </div>
+      <div class="ScreenShotImageBoxRightSide">
+        <img class="ScreenshotImage" src="SKETCHES/START_SCENE.png">
+      </div>
+    </div>
+    <br>
+    <div class="ScreenShotBoxOutline">
+      <div class="ScreenShotHeaderBox">
+        <h1 class="ScreenShotHeader">Screen 3</h1>
+      </div>
+      <div class="ScreenShotTextBox">
+        <p class="ScreenShotText">Screen 3 is our Menu Scene. In this scene the player can pick which type of Rock Paper Scissors they can play, whether it be classic rock paper scissors, 1v1 with a friend, or insane mode, which is a custom game mode, of rock paper scissors but with a twist.</p>
+      </div>
+      <div class="ScreenShotImageBoxRightSide">
+        <img class="ScreenshotImage" src="SKETCHES/MENU_SCENE.png">
+      </div>
+    </div>
+    <br>
+    <div class="ScreenShotBoxOutline">
+      <div class="ScreenShotHeaderBox">
+        <h1 class="ScreenShotHeader">Screen 4</h1>
+      </div>
+      <div class="ScreenShotTextBox">
+        <p class="ScreenShotText">Screen 4 is our Game Scene. In this scene, our user gets to play rock paper scissors. They need to click the image of rock, paper, or scissors as that is our input.</p>
+      </div>
+      <div class="ScreenShotImageBoxRightSide">
+        <img class="ScreenshotImage" src="SKETCHES/GAME_SCENE.png">
+      </div>
+    </div>
+    <br>
+  </body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ /* 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Home Page of ISU website
+  This page contains the code for the ISU website
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#aad5c9;
+}
+
+/* This is the Homepage stylizing*/
+
+.HomepageBox{
+  margin: 15px auto 0px auto; /* top right bottom left */
+  border-style:solid;
+  border-size: 5px;
+  border-color:white;
+  border-radius: 3%;
+  height: 356px;
+  max-width: 85%;
+}
+
+.HP_IMG{
+  width: 100%;
+  height: 350px;
+  border-radius: 3%;
+  z-index:-1;
+}
+
+.HomepageHeaderBox{
+  max-width: 85%;
+  height: 100px;
+  text-align: center;
+  margin: -175px auto 0px auto;
+}
+
+
+.HopePageHeader{
+  font-size: 75px;
+  font-family: 'Odibee Sans', cursive;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+}
+
+.InfoBoxOutline{
+  height: 356px;
+  max-width: 85%;
+  border-style:solid;
+  border-size: 5px;
+  border-color:white;
+  border-radius: 4px;
+  margin: 35px auto 0px auto;
+  border-radius: 3%;
+  background-color: #808f99;
+}
+
+.InfoBoxOutline:hover{
+  border-color: red;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px red;
+}
+
+.InfoHeaderBox{
+  width: 99.6%;
+  height: 50px;
+  margin-top: 3em;
+  background-color:#545F66;
+  text-align:center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px black;
+  font-family: 'Odibee Sans', cursive;
+}
+
+.InfoHeader{
+  font-size: 35px;
+  color: white;
+  font-family: 'Odibee Sans', cursive;
+  filter: drop-shadow(8px 8px 10px black);
+}
+
+.InfoTextBox{
+  width: 90%;
+  height: 55%;
+  margin: 65px auto 0px auto;
+  font-size: 25px;
+  font-family: 'Odibee Sans', cursive;
+}
+
+
+.InfoText{
+  color:white;
+  font-size: 35px;
+  max-width: 95%;
+  max-height: 55%;
+  margin: 35px auto 0px auto;
+}
+
+.WorkBoxOutline{
+  height: 515px;
+  max-width: 85%;
+  border-style:solid;
+  border-size: 5px;
+  border-color:white;
+  border-radius: 4px;
+  margin: 35px auto 0px auto;
+  border-radius: 3%;
+  background-color: #808f99;
+}
+
+.WorkBoxOutline:hover{
+  border-color: red;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px red;
+}
+
+.WorkHeaderBox{
+  width: 100%;
+  height: 50px;
+  margin-top: 3em;
+  background-color:#545F66;
+  text-align:center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px black;
+}
+
+.WorkHeader{
+  font-size: 35px;
+  color: white;
+}
+
+.HorizontalWorkBox{
+  width: 100%;
+  height: 78%;
+}
+
+.AkaranBox{
+  border-style:solid;
+  border-radius: 50%;
+  text-align: justify;
+  width: 25%;
+  height: 100%;
+  float: left;
+  margin-left:8%;
+}
+
+.AkaranAvatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.AkaranAvatar:hover{
+  opacity: 0.2;
+}
+
+.AvatarHiddenText{
+  max-width:100%;
+  border-style:solid;
+  margin: -60% 0px 0px 0px;
+  display: block;
+  opacity: 0;
+  text-align: center;
+}
+
+.AvatarText{
+  font-size: 30px;
+  color: white;
+  background:black;
+}
+
+.AkaranAvatar:hover + .AvatarHiddenText{
+  opacity: 1;
+}
+
+.KavenBox{
+  border-style:solid;
+  width: 25%;
+  height: 100%;
+  float: left;
+  margin-left: 4.5%;
+  border-radius: 50%;
+}
+
+.KavenAvatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.KavenAvatar:hover{
+  opacity: 0.2;
+}
+
+.KavenAvatar:hover + .AvatarHiddenText{
+  opacity: 1;
+}
+
+.SansarBox{
+  border-style:solid;
+  width: 25%;
+  height: 100%;
+  float: right;
+  margin-right:8%;
+  border-radius: 50%;
+}
+
+.SansarAvatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.SansarAvatar:hover{
+  opacity: 0.2;
+}
+
+.SansarAvatar:hover + .AvatarHiddenText{
+  opacity: 1;
+}
+
+.PossibleBoxOutline{
+  height: 575px;
+  max-width: 85%;
+  border-style:solid;
+  border-size: 5px;
+  border-color:white;
+  border-radius: 4px;
+  margin: 35px auto 0px auto;
+  border-radius: 3%;
+  background-color: #808f99;
+}
+
+.PossibleBoxOutline:hover{
+  border-color: red;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px red;
+}
+
+.PossibleHeaderBox{
+  width: 99.6%;
+  height: 50px;
+  margin-top: 3em;
+  background-color:#545F66;
+  text-align:center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px black;
+}
+
+.PossibleHeader{
+  font-size: 35px;
+  color: white;
+}
+
+.PossibleTextBox{
+  width: 90%;
+  height: 55%;
+  margin: 65px auto 0px auto;
+  font-size: 25px;
+}
+
+.PossibleText{
+  color:white;
+  text-size: 35px;
+  max-width: 95%;
+  max-height: 55%;
+  margin: 35px auto 0px auto;
+}
+
+.ScreenBoxOutline{
+  height: 450px;
+  max-width: 85%;
+  border-style:solid;
+  border-size: 5px;
+  border-color:white;
+  border-radius: 4px;
+  margin: 35px auto 0px auto;
+  border-radius: 3%;
+  background-color: #808f99;  
+}
+
+.ScreenBoxOutline:hover{
+  border-color: red;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px red;
+}
+
+.ConcernsBoxOutline{
+  height: 410px;
+  max-width: 85%;
+  border-style:solid;
+  border-size: 5px;
+  border-color:white;
+  border-radius: 4px;
+  margin: 35px auto 0px auto;
+  border-radius: 3%;
+  background-color: #808f99;  
+}
+
+.ConcernsBoxOutline:hover{
+  border-color: red;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 10px 3px red;
+}
+
+/*This is the roughsketch page stylizing*/
+
+.RSHP_IMG{
+  width: 100%;
+  height: 350px;
+  position:relative;
+  border-radius: 3%;
+  opacity: 0.7;
+  z-index:-1;
+}
+
+.ScreenShotBoxOutline{
+  margin: 15px auto 0px auto; /* top right bottom left */
+  border-style:solid;
+  border-color: white;
+  height: 425px;
+  max-width: 85%;
+  background-color: #808f99;
+}
+
+.ScreenShotHeaderBox{
+  height:15%;
+  width: 100%;
+  border-style:solid;
+}
+
+.ScreenShotHeader{
+  text-align: center;
+  font-size: 38px;
+  margin-top: 0.5%;
+  color: white;
+}
+
+.ScreenShotTextBox{
+  margin: 25px auto 0px auto;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 75%;
+  float: left;
+  margin-left:3%;
+}
+
+.ScreenShotTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;
+}
+
+.ScreenShotText{
+  font-size: 28px;
+  color: white;
+  text-align: justify;
+  height: 85%;
+  width: 85%;
+  margin: 20px auto 0px auto; /* top right bottom left */
+}
+
+.ScreenShotImageBoxRightSide{
+  margin: 25px auto 0px auto;
+  border-style:solid;
+  width: 35%;
+  height: 75%;
+  float: right;
+  margin-right:5%;
+}
+
+.ScreenshotImage{
+  width: 100%;
+  height: 100%;
+}
+
+.ScreenShotImageBoxRightSide:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;
+}
+
+/*This is the CodeSnippet page stylizing*/
+
+.CODESHHP_IMG{
+  width: 100%;
+  height: 350px;
+  position:relative;
+  border-radius: 3%;
+  opacity: 0.8;
+  z-index:-1;
+}
+
+.CODESHHomepageHeaderBox{
+  max-width: 85%;
+  height: 100px;
+  text-align: center;
+  margin: -175px auto 0px auto;
+}
+
+.CodeSHBoxOutline{
+  margin: 15px auto 0px auto; /* top right bottom left */
+  border-style:solid;
+  border-color: white;
+  height: 425px;
+  max-width: 85%;
+  background-color: #808f99;
+}
+
+.CodeSHHeaderBox{
+  height:15%;
+  width: 100%;
+  border-style:solid;
+}
+
+.CodeSHHeader{
+  text-align: center;
+  font-size: 38px;
+  margin-top: 0.5%;
+  color: white;
+}
+
+.CodeSHTextBox{
+  margin: 25px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 75%;
+  float: left;
+}
+
+.CodeSHText{
+  font-size: 28px;
+  color: white;
+  text-align: justify;
+  height: 85%;
+  width: 85%;
+  margin: 20px auto 0px auto;
+}
+
+.CODESHIMGBOX{
+  margin: 25px auto 0px auto;
+  border-style:solid;
+  width: 35%;
+  height: 75%;
+  float: right;
+  margin-right:5%;
+}
+
+.ScreenshotImage{
+  width: 100%;
+  height: 100%;
+}
+
+.GlobalCODESHIMGBOX{
+  margin: 25px 12% 0px auto;
+  border-style:solid;
+  width: 22.5%;
+  height: 72.5%;
+  float: right;
+}
+
+.GlobalCodeSHTextBox{
+  margin: 100px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 35%;
+  float: left;
+}
+
+.ScreenshotImage1{
+  height: 300px;
+  width: 100%;
+  margin: 0px auto 0px auto;
+}
+
+.FwiPCodeSHTextBox{
+  margin: 120px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 30%;
+  float: left; 
+}
+
+.FwPCodeSHTextBox{
+  margin: 118px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 32%;
+  float: left;   
+}
+
+.FwPCODESHIMGBOX{
+  margin: 45px 5% 0px auto;
+  border-style:solid;
+  width: 35%;
+  height: 64%;
+  float: right;
+}
+
+.FwPaRVCodeSHBoxOutline{
+  margin: 15px auto 0px auto; 
+  border-style:solid;
+  border-color: white;
+  height: 735px;
+  max-width: 85%;
+  background-color: #808f99;  
+}
+
+.FwPaRVCodeSHHeaderBox{
+  height:8.5%;
+  width: 100%;
+  border-style:solid; 
+}
+
+.FwPaRVCodeSHTextBox{
+  margin: 225px auto 0px auto;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 26%;
+  float: left;
+  margin-left:3%;   
+}
+
+.FwPaRVCODESHIMGBOX{
+  margin: 25px 5% 0px auto;
+  border-style:solid;
+  width: 33%;
+  height: 83%;
+  float: right;  
+}
+
+.FPaRVCodeSHBoxOutline{
+  margin: 15px auto 0px auto; 
+  border-style:solid;
+  border-color: white;
+  height: 735px;
+  max-width: 85%;
+  background-color: #808f99;
+}
+
+.FPaRVCodeSHHeaderBox{
+  height:8.5%;
+  width: 100%;
+  border-style:solid;  
+}
+
+.FPaRVCodeSHTextBox{
+  margin: 150px auto 0px auto;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 40%;
+  float: left;
+  margin-left:3%;  
+}
+
+.FPaRVCODESHIMGBOX{
+  margin: 25px 5% 0px auto;
+  border-style:solid;
+  width: 33%;
+  height: 83%;
+  float: right;
+}
+
+.SF1CodeSHBoxOutline{
+  margin: 15px auto 0px auto; 
+  border-style:solid;
+  border-color: white;
+  height: 350px;
+  max-width: 85%;
+  background-color: #808f99;  
+}
+
+.SF1CodeSHHeaderBox{
+  height:18%;
+  width: 100%;
+  border-style:solid;
+}
+
+.SF1CodeSHTextBox{
+  margin: 70px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 41%;
+  float: left;  
+}
+
+.SF1CODESHIMGBOX{
+  margin: 45px 5% 0px auto;
+  border-style:solid;
+  width: 35%;
+  height: 60%;
+  float: right;  
+}
+
+.SF2CodeSHBoxOutline{
+  margin: 15px auto 0px auto; 
+  border-style:solid;
+  border-color: white;
+  height: 500px;
+  max-width: 85%;
+  background-color: #808f99;  
+}
+
+.SF2CodeSHHeaderBox{
+  height:13%;
+  width: 100%;
+  border-style:solid;
+}
+
+.SF2CodeSHTextBox{
+  margin: 75px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 50%;
+  height: 44%;
+  float: left;  
+}
+
+.SF2CODESHIMGBOX{
+  margin: 20px auto 0px auto;
+  border-style:solid;
+  width: 37%;
+  height: 77%;
+  float: right;
+  margin-right:5%;
+}
+
+.AECodeSHBoxOutline{
+  margin: 15px auto 0px auto; 
+  border-style:solid;
+  border-color: white;
+  height: 425px;
+  max-width: 85%;
+  background-color: #808f99;  
+}
+
+.AECodeSHTextBox{
+  margin: 110px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 33%;
+  float: left;
+}
+
+.AECODESHIMGBOX{
+  margin: 25px auto 0px 0px;
+  border-style:solid;
+  width: 40%;
+  height: 70%;
+  float: right;
+  margin-right:3%;  
+}
+
+.BSCodeSHBoxOutline{
+  margin: 15px auto 0px auto; 
+  border-style:solid;
+  border-color: white;
+  height: 425px;
+  max-width: 85%;
+  background-color: #808f99;    
+}
+
+.BSCodeSHTextBox{
+  margin: 100px auto 0px 3%;
+  border-style:solid;
+  text-align: justify;
+  width: 52%;
+  height: 28%;
+  float: left;  
+}
+
+.BSCODESHIMGBOX{
+  margin: 25px 3% 0px auto;
+  border-style:solid;
+  width: 38%;
+  height: 75%;
+  float: right; 
+}
+
+.GlobalCodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.FwiPCodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.FwPCodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.FwPaRVCodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.FPaRVCodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.SF1CodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.SF2CodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black; 
+}
+
+.AECodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.BSCodeSHTextBox:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+}
+
+.GlobalCODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;  
+}
+
+.FwPCODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;  
+}
+
+.FwPaRVCODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;  
+}
+
+.FPaRVCODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black; 
+}
+
+.SF1CODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;  
+}
+
+.SF2CODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;  
+}
+
+.AECODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black; 
+}
+
+.BSCODESHIMGBOX:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 10px 0 15px 6px black;  
+}
+
+/* This is our nav bar */
+.SidebarLength{
+  height: 100%;
+  width: 330px;
+  position:fixed;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.SidebarLength .Menu{
+  position: absolute;
+  left: 20px;
+  height: 45px;
+  width: 45px;
+  z-index: 999;
+  color: white;
+  background: #849094;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 23px;
+  transition: all 0.6s ease;
+}
+
+#btn:checked ~ .Menu{
+  left: 247px;
+}
+
+#btn:checked ~ .Menu i:before{
+  content: "\f00d";
+}
+
+.SidebarLength #sidebar{
+  position: relative;
+  height: 100%;
+  width: 270px;
+  background: #849094;
+  overflow: hidden;
+  left: -270px;
+  transition: all 0.6s ease;
+  margin-top: -4%;
+}
+
+#btn:checked ~ #sidebar{
+  left: 0;
+}
+
+#sidebar .BarTitle{
+color:white;
+font-size: 25px;
+font-weight: 600;
+line-height: 65px;
+background-color: #545F66;
+text-align: center;
+border-bottom: 1px solid black;
+}
+
+#sidebar .Items{
+position: relative;
+background: #849094;
+height: 100%;
+width: 100%;
+list-style: none;
+}
+
+#sidebar .Items li{
+text-align:center;
+line-height: 50px;
+border-top: 1px solid rgba(255,255,255,0.1);
+border-bottom: 1px solid black;
+transition: all 0.5s ease;
+}
+
+#sidebar .Items li:hover{
+border-top: 1px solid transparent;
+border-bottom: 1px solid transparent;
+box-shadow: 0 0 10px 3px black;
+}
+
+#sidebar .Items li a{
+color:white;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+height: 100%;
+width: 100%;
+display: block;
+}
+
+#sidebar .Items li a i{
+margin-right:20px;
+}
+

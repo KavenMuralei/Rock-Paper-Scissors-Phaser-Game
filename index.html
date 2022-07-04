@@ -1,0 +1,130 @@
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Home Page of ISU website
+  This page contains the code for the ISU website
+-->
+
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="icon" href="IMAGES/Home.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+ <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href=index.html>Home</a></li>
+          <li><a href="/ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="/CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="/NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="/HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="/GAME/index.html">Game</a></li>
+          <li><a href="/code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="HP_IMG" src="IMAGES/RPSHomepageIMG.gif">
+      <div class="HomepageHeaderBox">
+        <h1 class="HopePageHeader">Rock Paper Scissors Remastered</h1>
+      </div>
+    </div>
+    <!--Below is is the div for our info box-->
+    <div class="InfoBoxOutline">
+      <div class="InfoHeaderBox">
+        <h2 class="InfoHeader">About this Project</h2>
+      </div>
+      <div class="InfoTextBox">
+        <p class="InfoText">Welcome to Rock Paper Scissors Remastered! This game is Akaran, Kaven and Sansar's Computer Science Summative assignment. Originally, we did Rock, Paper, Scissors for our Unit 2 assignment. Now, as the semester is almost finished, we planned on making a new version of our alert game, and push our knowledge of coding to the max.</p>
+      </div>
+    </div>
+    <div class="WorkBoxOutline">
+      <div class="WorkHeaderBox">
+        <h2 class="WorkHeader">Work Distribution</h2>
+      </div>
+      <div class="HorizontalWorkBox">
+        <div class="AkaranBox">
+          <img class="AkaranAvatar" src="IMAGES/AkaranAvatar.png">
+          <div class="AvatarHiddenText">
+            <p class="AvatarText">Akaran: Finds and creates images and sprites.</p>
+          </div>
+        </div>
+        <div class="KavenBox">
+          <img class="KavenAvatar" src="IMAGES/KavenAvatar.jpg">
+          <div class="AvatarHiddenText">
+            <p class="AvatarText">Kaven: Main developer in JS, designer for the rough sketches</p>
+          </div>
+        </div>
+        <div class="SansarBox">
+          <img class="SansarAvatar" src="IMAGES/SansarAvatar.png">
+          <div class="AvatarHiddenText">
+            <p class="AvatarText">Sansar: Main developer in HTML, CSS and partial JS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="PossibleBoxOutline">
+      <div class="PossibleHeaderBox">
+        <h2 class="PossibleHeader">Possible Challenges</h2>
+      </div>
+      <div class="PossibleTextBox">
+        <p class="PossibleText">We think the biggest challenge is to make Rock Paper Scissors appealing to the user, and also to be using all the different ways of coding in class. Thus, we decided to create 2 game modes, normal and insane.<br>
+          <br>
+        1. The first challenge is to make the AI unpredictable<br><br>
+        2. To use arrays to store the user's data. One of the ways we plan on implementing string functions is by creating initials for someone's names. For example, if someone were to type their name as ”Alex Smith” it would return it as A.S.<br><br>
+        3.In our first game, we implemented an insane mode. This game mode would ask the user a trivia question every time they answered right. Before, it was very tough to implement this before. However, we can use arrays now to store these questions. So now we can randomly call a random sort of questions.<br><br>
+        4.For sorting, we plan on implementing a scoreboard. In this scoreboard, we can sort each score from greatest to least.<br>
+        </p>
+      </div>
+    </div>
+    <div class="ScreenBoxOutline">
+      <div class="InfoHeaderBox">
+        <h2 class="InfoHeader">Screens</h2>
+      </div>
+      <div class="InfoTextBox">
+        <p class="InfoText">We have 5 screens for the game.<br>
+        1: Initial Scene <br>
+        2: Start Scene<br>
+        3: Menu Scene<br>
+        4: Game Scene<br>
+        5: Insane Game Scene<br>
+        6: End Scene<br>
+        </p>
+      </div>
+    </div>
+    <div class="ConcernsBoxOutline">
+      <div class="InfoHeaderBox">
+        <h2 class="InfoHeader">Concerns</h2>
+      </div>
+      <div class="InfoTextBox">
+        <p class="InfoText">There are 2 main concerns with regard to the game. Our first concern is our lack of experience developing a game. We will be implementing five new functions never taught in class. Researching and implementing these functions will have a learning curve, so we need to allocate time for that. Our second concern is creating a scoreboard. We have a lot of plans for the scoreboard, so implementing all features at once will prove a challenge. Mainly, we are trying to incorporate initials instead of full names, and a sorting algorithm to rank scores. This concern can be mitigated with proper scope-planning.
+        </p>
+      </div>
+    </div>
+    <br>
+  </body>
+</html>

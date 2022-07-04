@@ -1,0 +1,135 @@
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  How To Play
+  This page contains the code for the ISU website
+-->
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>How To Play</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../IMAGES/Question.png">
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="../CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="../NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="index.html">How To Play</a></li>
+          <li><a href="../GAME/index.html">Game</a></li>
+          <li><a href="../code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="HP_IMG" src="../IMAGES/HTP.gif">
+    </div>
+    <br>
+    <!-- How to play divs-->
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Enter your Username</h1>
+      </div>
+      <div class="HTPTextBox1">
+        <p class="HTPText">In the intermission screen, the user will get an alert, where they will be able to type in their desired username. Note, the username must be all in words, and have no numbers or symbols.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/Intermission.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Start Game</h1>
+      </div>
+      <div class="HTPTextBox2and3">
+        <p class="HTPText">The user presses start to be able to choose which game modes to play.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/PresstoPlay.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Gamemodes</h1>
+      </div>
+      <div class="HTPTextBox2and3">
+        <p class="HTPText">In Rock Paper Scissors Remastered, there are 2 game modes, Classic and Insane mode.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/ChooseGamemode.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPINBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Picking Amount of Rounds</h1>
+      </div>
+      <div class="HTPTextBox4">
+        <p class="HTPText">After the user picks their desired game mode, they will get an alert asking how many rounds they would like to play. Only odd numbers are accepted, as the winner cannot be decided with an even number of rounds.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/ChooseRoundWithAlert.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Classic Mode</h1>
+      </div>
+      <div class="HTPTextBox5">
+        <p class="HTPText">Classic mode is normal rock Paper Scissors, where rock beats scissors, paper beats rock, scissors beat paper. If there happens to be a tie, such as Rock and Rock, the round will be replayed.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/TheGameEasy.PNG">
+      </div>
+    </div>
+    <br>
+    <div class="HTPINBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">Insane Mode</h1>
+      </div>
+      <div class="HTPTextBox6">
+        <p class="HTPText">In Insane mode, the same rules still apply, where rock beats scissors, paper beats rock, scissors beat paper. The twist in Insane mode is that when the user wins a round, they will need to answer a random question to be able to get the win of the round. If the user answers incorrectly, they lose the round. If a tie occurs, the user will also be penalized and lose the round.</p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/TheGameHardMode.PNG">
+      </div>
+    </div>
+    <div class="HTPBoxOutline">
+      <div class="HTPHeaderBox">
+        <h1 class="HTPHeader">End Scene</h1>
+      </div>
+      <div class="HTPTextBox2and3">
+        <p class="HTPText">This is the end scene. If you had a greater score then the opponent, you will be presented with a victory message. Otherwise, it would show you lost. </p>
+      </div>
+      <div class="HTPImageBox">
+        <img class="ScreenshotImage" src="IMAGES/end.png">
+      </div>
+    </div>
+    <br>
+  </body>
+</html>

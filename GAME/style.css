@@ -1,0 +1,572 @@
+/*
+ Akaran, Kaven, Sansar 
+ 6/6/2022
+ Style page
+ This page contains styling for the game page
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#aad5c9;
+}
+
+canvas{
+  position:absolute;
+  left:27.5%;
+  margin: 5% auto 0px auto;
+  border-style: solid;
+  border-width:thick;
+  display: block;
+}
+
+.HeaderBox{
+  height: 150px;
+  margin: 20px auto 0px auto;
+  max-width: 85%;
+}
+
+.title {
+  font-size: 90px;
+  font-family: 'Odibee Sans', cursive;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+  text-align: center;
+}
+
+.scoreboardoutline{
+  float: right;
+  position: static;
+  width: 450px;
+  height: 400px; 
+  background-color:coral;
+  margin: 10% 2.5% 0px 0px;
+  border-style: solid;
+  border-width:thick;
+}
+
+.scoreheaderbox{
+  max-width: 90%;
+  max-height: 125px;
+  margin: 0px auto 0px auto;
+}
+
+.scoreboardHeader {
+  font-size: 25px;
+  font-family: 'DM Sans', sans-serif;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+  text-align:center;
+}
+
+.scorenamerows{
+  max-width: 100%;
+  height: 50px;
+}
+
+.scoreboxnamerows{
+  width: 110px;
+  height: 100%;
+  float:left;
+  border-style:solid;
+  border-width: 1px;
+}
+
+.scoreheadertext{
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: 'DM Sans', sans-serif;
+  color:white;
+  filter: drop-shadow(8px 8px 10px black);
+}
+
+/* usernames collum */
+
+.UsernameCollum{
+  border-style:solid;
+  width: 110px;
+  height: 80%;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+.UsernameCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;
+}
+
+#PlayerName1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerName5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Rounds Played collum */
+
+.RoundsCollum{
+  border-style:solid;
+  width: 110px;
+  height: 80%;
+  float:left;
+  border-width: 1px;
+}
+
+.RoundsCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.RoundsCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+#RoundsPlayed1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#RoundsPlayed5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Wins collum */
+
+.WinsCollum{
+ border-style:solid;
+ width: 110px;
+ height: 80%;
+ float:left;
+ border-width: 1px;
+}
+
+.WinsCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.WinsCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+#PlayerWins1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerWins5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Losses collum */
+
+.LossesCollum{
+  border-style:solid;
+  width: 110px;
+  height: 80%;
+  float:left;
+  border-width: 1px;
+}
+
+.LossesCells1{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells2{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells3{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells4{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+.LossesCells5{
+  width: 110px;
+  height: 20%;
+  border-style:solid;
+  float:left;
+  border-width: 1px;  
+}
+
+#PlayerLosses1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses2{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%; 
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses3{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses4{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+#PlayerLosses5{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15%;  
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Hover effect on the cells */
+.UsernameCells1:hover,
+.RoundsCells1:hover,
+.WinsCells1:hover,
+.LossesCells1:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+.UsernameCells2:hover,
+.RoundsCells2:hover,
+.WinsCells2:hover,
+.LossesCells2:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+.UsernameCells3:hover,
+.RoundsCells3:hover,
+.WinsCells3:hover,
+.LossesCells3:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black; 
+  transition: all 0.2s ease;
+}
+
+.UsernameCells4:hover,
+.RoundsCells4:hover,
+.WinsCells4:hover,
+.LossesCells4:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+.UsernameCells5:hover,
+.RoundsCells5:hover,
+.WinsCells5:hover,
+.LossesCells5:hover{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0 15px 6px black;  
+  transition: all 0.2s ease;
+}
+
+/* This is our nav bar */
+.SidebarLength{
+  height: 100%;
+  width: 330px;
+  position:fixed;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.SidebarLength .Menu{
+  position: absolute;
+  left: 20px;
+  height: 45px;
+  width: 45px;
+  z-index: 999;
+  color: white;
+  background: #849094;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 23px;
+  transition: all 0.6s ease;
+}
+
+#btn:checked ~ .Menu{
+  left: 247px;
+}
+
+#btn:checked ~ .Menu i:before{
+  content: "\f00d";
+}
+
+.SidebarLength #sidebar{
+  position: relative;
+  height: 100%;
+  width: 270px;
+  background: #849094;
+  overflow: hidden;
+  left: -270px;
+  transition: all 0.6s ease;
+  margin-top: -5%;
+}
+
+#btn:checked ~ #sidebar{
+  left: 0;
+}
+
+#sidebar .BarTitle{
+color:white;
+font-size: 25px;
+font-weight: 600;
+line-height: 65px;
+background-color: #545F66;
+text-align: center;
+border-bottom: 1px solid black;
+}
+
+#sidebar .Items{
+position: relative;
+background: #849094;
+height: 100%;
+width: 100%;
+list-style: none;
+}
+
+#sidebar .Items li{
+text-align:center;
+line-height: 50px;
+border-top: 1px solid rgba(255,255,255,0.1);
+border-bottom: 1px solid black;
+transition: all 0.5s ease;
+}
+
+#sidebar .Items li:hover{
+border-top: 1px solid transparent;
+border-bottom: 1px solid transparent;
+box-shadow: 0 0 10px 3px black;
+}
+
+#sidebar .Items li a{
+color:white;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+height: 100%;
+width: 100%;
+display: block;
+}
+
+#sidebar .Items li a i{
+margin-right:20px;
+}

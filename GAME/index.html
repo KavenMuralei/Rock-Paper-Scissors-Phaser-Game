@@ -1,0 +1,145 @@
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Game Page
+  This page contains the code for the ISU website
+-->
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="icon" href="../IMAGES/Game.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Game</title>
+  </head>
+  <body>
+  <!--Below is out Navigation Bar-->
+     <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="/ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="/CODESNIPPET/index.html">Code Snippets</a></li>
+          <li><a href="/NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="/HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="/GAME/index.html">Game</a></li>
+          <li><a href="/code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+  <!--Below is header for the website-->
+    <div class="HeaderBox">
+      <h1 class="title">Rock Paper Scissors Remastered</h1>
+    </div>
+  <!--Below is the scoreboard for the game-->
+    <div class="scoreboardoutline">
+      <div class="scoreheaderbox">
+        <h2 class="scoreboardHeader">Scoreboard</h2>
+      </div>
+      <div class="scorenamerows">
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Username</h2>
+        </div>
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Rounds</h2>
+        </div>
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Wins</h2>
+        </div>
+        <div class="scoreboxnamerows">
+          <h2 class="scoreheadertext">Losses</h2>
+        </div>
+      </div>
+      <!--Below is the Username Collum-->
+      <div class="UsernameCollum">
+        <div class="UsernameCells1">
+          <p id="PlayerName1">-</p>
+        </div>
+        <div class="UsernameCells2">
+          <p id="PlayerName2">-</p>
+        </div>
+        <div class="UsernameCells3">
+          <p id="PlayerName3">-</p>
+        </div>
+        <div class="UsernameCells4">
+          <p id="PlayerName4">-</p>
+        </div>
+        <div class="UsernameCells5">
+          <p id="PlayerName5">-</p>
+        </div>
+      </div>
+      <!--Below is the rounds Played Collum-->
+      <div class="RoundsCollum">
+        <div class="RoundsCells1">
+          <p id="RoundsPlayed1">-</p>
+        </div>
+        <div class="RoundsCells2">
+          <p id="RoundsPlayed2">-</p>
+        </div>
+        <div class="RoundsCells3">
+          <p id="RoundsPlayed3">-</p>
+        </div>
+        <div class="RoundsCells4">
+          <p id="RoundsPlayed4">-</p>
+        </div>
+        <div class="RoundsCells5">
+          <p id="RoundsPlayed5">-</p>
+        </div>
+      </div>
+      <!--Below is the Wins collum-->
+      <div class="WinsCollum">
+        <div class="WinsCells1">
+          <p id="PlayerWins1">-</p>
+        </div>
+        <div class="WinsCells2">
+          <p id="PlayerWins2">-</p>
+        </div>
+        <div class="WinsCells3">
+          <p id="PlayerWins3">-</p>
+        </div>
+        <div class="WinsCells4">
+          <p id="PlayerWins4">-</p>
+        </div>
+        <div class="WinsCells5">
+          <p id="PlayerWins5">-</p>
+        </div>
+      </div>
+      <!--Below is the Losses collum-->
+      <div class="LossesCollum">
+        <div class="LossesCells1">
+          <p id="PlayerLosses1">-</p>
+        </div>
+        <div class="LossesCells2">
+          <p id="PlayerLosses2">-</p>
+        </div>
+        <div class="LossesCells3">
+          <p id="PlayerLosses3">-</p>
+        </div>
+        <div class="LossesCells4">
+          <p id="PlayerLosses4">-</p>
+        </div>
+        <div class="LossesCells5">
+          <p id="PlayerLosses5">-</p>
+        </div>  
+      </div>     
+    </div>
+  </body>
+</html>

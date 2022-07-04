@@ -1,0 +1,174 @@
+ <!-- 
+  Akaran, Kaven, Sansar 
+  6/6/2022
+  Code Snippets
+  This page contains for the Code Snippets page
+-->
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Code Snippets</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <link rel="icon" href="../IMAGES/Snippet.png">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/45b2b63662.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Below is out Navigation Bar-->
+    <div class="SidebarLength">
+      <input type="checkbox" id="btn">
+      <label for="btn" class="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </label>  
+      <nav id="sidebar">
+        <div class="BarTitle">Content</div>
+        <ul class="Items">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../ROUGHSKETCHES/index.html">Rough Sketches</a></li>
+          <li><a href="/index.html">Code Snippets</a></li>
+          <li><a href="../NEWFUNCTIONS/index.html">New Functions</a></li>
+          <li><a href="../HOWTOPLAY/index.html">How To Play</a></li>
+          <li><a href="../GAME/index.html">Game</a></li>
+          <li><a href="../code.txt">Code.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Below is our Header for the webpage-->
+    <div class="HomepageBox">
+      <img class="CODESHHP_IMG" src="../IMAGES/Snippet.gif">
+      <div class="CODESHHomepageHeaderBox">
+        <h1 class="HopePageHeader">Code Snippet</h1>
+      </div>
+    </div>
+    <br>
+    <div class="CodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Global Variables</h1>
+      </div>
+      <div class="GlobalCodeSHTextBox">
+        <p class="CodeSHText">These are some of the few global variables we used in our game. There main function is to key track of the players score, opponets score, round count, and the number of rounds</p>
+      </div>
+      <div class="GlobalCODESHIMGBOX">
+        <img class="ScreenshotImage1" src="IMAGES/globalVariables.png">
+      </div>
+    </div>
+    <br>
+    <div class="CodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions without Parameters</h1>
+      </div>
+      <div class="FwiPCodeSHTextBox">
+        <p class="CodeSHText">This is an example of a function with no parameters. It's main role is to hide the rock paper and scissor images</p>
+      </div>
+      <div class="FwPCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionWithoutParameters.png">
+      </div>
+    </div>
+    <br>
+    <div class="CodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions with Parameters</h1>
+      </div>
+      <div class="FwPCodeSHTextBox">
+        <p class="CodeSHText">This functions with a parameter is used as a button. It plays a sound, starts a new scene, and removes an old scene when clicked. </p>
+      </div>
+      <div class="FwPCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionWithParameters.png">
+      </div>
+    </div>
+    <br>
+    <div class="FwPaRVCodeSHBoxOutline">
+      <div class="FwPaRVCodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions without Parameters & Return values</h1>
+      </div>
+      <div class="FwPaRVCodeSHTextBox">
+        <p class="CodeSHText">This is yet another example of a function without a parameter. However, this one also has a return value. This functions main role is to read the user inputted username and check to see if it has any characters that are not apart of the basic alphabet.</p>
+      </div>
+      <div class="FwPaRVCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionReturns.png">
+      </div>
+    </div>
+    <br>
+    <div class="FPaRVCodeSHBoxOutline">
+      <div class="FPaRVCodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Functions Parameters & Return values</h1>
+      </div>
+      <div class="FPaRVCodeSHTextBox">
+        <p class="CodeSHText">This function which has a parameter and a return value is so important to our game. With our old rock paper scissor game, we had to constantly copy and paste if and else statements to check if the user won/lost/tied with the bot. However this function reads the user inputted rock paper scissor and compares it to the randomly generated rock paper scissor from our array. Ultimately, this function removes 500+ lines of code.</p>
+      </div>
+      <div class="FPaRVCODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/functionParameterReturn.png">
+      </div>
+    </div>
+    <br>
+    <div class="SF1CodeSHBoxOutline">
+      <div class="SF1CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">String Function #1</h1>
+      </div>
+      <div class="SF1CodeSHTextBox">
+        <p class="CodeSHText">This is a simple string function. Is simply changes a username to all lower case. This is then used for the string function below!</p>
+      </div>
+      <div class="SF1CODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/stringFunction1.png">
+      </div>
+    </div>
+    <br>
+    <div class="SF2CodeSHBoxOutline">
+      <div class="SF2CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">String Function #2</h1>
+      </div>
+      <div class="SF2CodeSHTextBox">
+        <p class="CodeSHText">Theres actually quite a lot of string functions used in this snippet. Firstly, .length() is used to check how long the user name is for a for let statement. Then, a if statement check each character of the username to see if it include normal alphabetic characters. If it doesn't, then a count is added. </p>
+      </div>
+      <div class="SF2CODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/stringFunction2.png">
+      </div>
+    </div>
+    <br>
+    <div class="AECodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Array Example #1</h1>
+      </div>
+      <div class="AECodeSHTextBox">
+        <p class="CodeSHText">This is a very simple array. It contains 3 elements called rock paper and scissors. It is then randomly selected and used for the base game.</p>
+      </div>
+      <div class="AECODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/array1.png">
+      </div>
+    </div>
+    <br>
+    <div class="AECodeSHBoxOutline">
+      <div class="CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Array Example #2</h1>
+      </div>
+      <div class="AECodeSHTextBox">
+        <p class="CodeSHText">This is an array which stores questions and answers. At the time of writing this, we have not used it just yet. However, it will be used in the final game for insane mode. </p>
+      </div>
+      <div class="AECODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/array2.png">
+      </div>
+    </div>
+    <br>
+    <div class="SF2CodeSHBoxOutline">
+      <div class="SF2CodeSHHeaderBox">
+        <h1 class="CodeSHHeader">Bubble Sorting</h1>
+      </div>
+      <div class="SF2CodeSHTextBox">
+        <p class="CodeSHText">This bubble sorting function will be used for leaderboard. We will need to use bubble sorting for 4 different categories, that being the usernames, rounds played, wins and losses. The leaderboard will be shown in HTML.</p>
+      </div>
+      <div class="SF2CODESHIMGBOX">
+        <img class="ScreenshotImage" src="IMAGES/bubbleSorting.png">
+      </div>
+    </div>
+    <br>
+  </body>
+</html>
